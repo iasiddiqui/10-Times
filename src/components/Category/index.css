@@ -1,0 +1,28 @@
+.cate-item{
+    display:flex;
+    flex-direction:column;
+    list-style-type:none;
+    background-color:#fdfefe;
+    box-shadow:2px 2px 4px #b4aeae;
+    padding:3px 5px;
+    margin:7px;
+    cursor:pointer;
+    border-radius:10px;
+    width:150px;
+    
+}
+
+.category{
+    font-size:9px;
+    font-family:roboto;
+    color:#6c6767;
+    margin-bottom:0px;
+    font-weight:bold;
+}
+
+.event{
+    font-size:6px;
+    font-family:roboto;
+    color:#aca3a3;
+    align-self:flex-start;
+}

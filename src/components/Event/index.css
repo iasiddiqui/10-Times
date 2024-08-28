@@ -1,0 +1,133 @@
+.event-row-cnt{
+    display:flex;
+    flex-direction:row;
+    justify-content:space-between;
+    align-items:center;
+    list-style-type:none;
+    background-color:#fbfcfc ;
+    padding:10px;
+    border-bottom:1px solid #c2bcba;
+}
+
+.event-row-cnt:hover{
+    background-color: #e7e9e9 ;
+}
+.row-id{
+    background-color:#e24932;
+    border-radius:23px;
+    height:30px;
+    width:50px;
+    text-align:center;align-self:center;
+    padding-top:15px;
+    color:#ffffff;
+    
+}
+
+.row-event-name{
+    font-family:roboto;
+    font-weight:300;
+    color:#5a6186;
+    font-size:18px;
+    width:130px;
+    cursor:pointer;
+}
+
+.row-event-name:hover{
+  color:#1645e2;
+}
+
+.row-event-date{
+    color:#828284;
+    font-size:15px;
+    font-family:roboto;
+    font-weight:normal;
+}
+
+.row-event-location{
+    color:#828284;
+    font-size:16px;
+    font-family:roboto;
+    font-weight:normal;
+    cursor:pointer;
+}
+
+.row-event-location:hover{
+    color:#f7531c;
+}
+
+.row-event-category{
+    color:#828284;
+    font-size:16px;
+    font-family:roboto;
+    font-weight:normal;
+    cursor:pointer;
+}
+
+.row-event-category:hover{
+    color:#f7531c;
+}
+
+.row-event-rating{
+    background-color:#1a7a07 ;
+    border-radius:3px;
+    color:#ffffff;
+    font-size:15px;
+    font-family:roboto;
+    font-weight:600;
+    padding:2px 4px;
+    cursor: pointer;
+}
+.star-icon{
+    border:none;
+    font-size:1rem;
+    text-align:center;
+    align-self:center;
+    color:rgb(241, 234, 234);
+    border:none;
+    
+}
+
+.row-follow-cnt{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+}
+.row-follow-para{
+    color:#828284;
+    font-size:15px;
+    font-family:roboto;
+    font-weight:normal;
+}
+
+.row-button{
+    background-color:white;
+    font-size:15px;
+    font-family:roboto;
+    color:#f67712;
+    border:1px solid #f67712;
+    padding:3px 5px;
+    border-radius:6px;
+    cursor:pointer;
+}
+
+.row-button:hover{
+    background-color:#f67712;
+    color:#ffffff;
+}
+
+
+.star-icon-btn{
+    color:#f67712;
+    font-size:14px;
+    border:none;
+}
+.star-icon-btn :hover{
+    color:#ffffff;
+   
+}
+
+
+.row-event-rating:hover{
+    background-color: #2a2f2f;
+}

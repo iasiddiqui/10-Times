@@ -1,0 +1,129 @@
+.top-events-cnt{
+    min-height:100vh;
+    width: 100%;
+}
+
+.top-events-header-cnt{
+    display:flex;
+    flex-direction:row;
+    justify-content:space-around;
+    align-items:center;
+    padding:5px;
+    background-color:#273746;
+    min-height:200px;
+}
+
+.top-events-heading-cnt{
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-start;
+    width:55%;
+    
+}
+
+.top-eveents-heading{
+    font-size:29px;
+    font-family:roboto;
+    font-weight:bold;
+    color:#fdfefe;
+}
+.top-eveents-para{
+    font-size:18px;
+    font-family:roboto;
+    margin-top:1px;
+    color:#f4fdfd;
+    
+}
+.information-para{
+    font-size:14px;
+    font-weight:200;
+    color:#fdfefe;
+}
+
+.infor-icon{
+    font-size:20px;
+    color:white;
+    margin-left:5px;
+    cursor:pointer;
+    align-self:center;
+    margin-top:4px;
+}
+.top-event-drop-input-cnt{
+    display:flex;
+    flex-direction:row;
+    justify-content:space-between;
+    align-items:center;
+}
+.top-event-dropdown{
+    height:40px;
+    outline:none;
+    background-color:#fdfefe;
+    border-radius:6px;
+
+}
+.top-event-input-cnt{
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+    background-color:#fdfefe;
+    height:40px;
+    margin-left:20px;
+    border-radius:4px;
+}
+.top-event-input-ele{
+    outline:none;
+    border:none;
+    background-color:transparent;
+}
+.top-event-input-search-icon{
+    font-size:17px;
+    margin-right:3px;
+}
+
+
+.table-cnt{
+    width: 100%;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    margin-top:10px;
+    
+}
+
+.table-column-cnt{
+    width:90%;
+    background-color:#f4f6f7;
+    display:flex;
+    flex-direction:row;
+    justify-content:space-around;
+    align-items:center;
+    height:80px;
+    border-bottom:2px solid #212f3d;
+    
+}
+.table-col-name{
+    font-size:19px;
+    font-family:bree serif;
+    font-weight:400;
+    color:#17202a;
+    margin-right:30px;
+}
+
+
+.table-column-name-cnt{
+    display:flex;
+    flex-direction:row;
+    justify-content:center;
+    align-items:center;
+}
+
+.events-list-cnt{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:space-between;
+    width: 90%;
+    margin-top:0px;
+    margin-left:-10px;
+}

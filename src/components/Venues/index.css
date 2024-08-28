@@ -1,0 +1,69 @@
+.venues-container{
+    min-height:100vh;
+} 
+
+.venues-search-input-container{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    background-image:url("https://cdn.fstoppers.com/styles/large-16-9/s3/lead/2019/06/76e1ee7c7bb1752715f69de03dcae5d7_jpg.webp");
+    height:350px;
+    background-size:cover;
+    background-position:center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    
+}
+
+.ten-head{
+  background-color:#f79004;
+  color:#ffffff;
+  font-size:20px;
+  font-family:roboto;
+  font-weight:bold;
+  height:50px;
+  width:30px;
+}
+
+.venus-head{
+  color:#ffffff;
+  font-size:20px;
+  font-family:roboto;
+  font-weight:300;
+}
+.venus-input-heading{
+    color:#ffffff;
+    font-size:35px;
+    font-family:robto;
+}
+.venue-input-para{
+  color:#ffffff;
+  font-size:25px;
+  font-family:roboto;
+  font-weight:bold;
+}
+.venue-input-cnt{
+    display:flex;
+    flex-direction:row;
+    justify-content: space-between;
+    align-items:center;
+    background-color:#f0eeea;
+    border-radius:6px;
+    width:50%;
+    height:33px;
+    padding:5px;
+
+}
+.venue-input{
+    border:none;
+    outline:none;
+    color:#2d2d2c;
+    font-size:19px;
+    background-color:transparent;
+}
+.venue-input-icon{
+    font-size:20px;
+    background-color:#f0eeea;
+    margin-right:5px;
+}

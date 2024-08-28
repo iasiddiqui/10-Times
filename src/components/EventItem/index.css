@@ -1,0 +1,72 @@
+.event-items-container{
+    min-height:100vh;   
+}
+
+.event-item-cnt{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    background-image:url("https://olcevents.com/wp-content/uploads/2022/07/BIG-10-meeting-at-OLC-IMG_4458-sm-e1696408751731.jpg");
+    background-size:cover;
+}
+
+.event-details-cnt{
+    display:flex;
+    flex-direction:row;
+    justify-content: space-between;
+    align-items:center;
+}
+
+.event-profile-cnt{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+.date-revie-cnt{
+    display:flex;
+    flex-direction:row;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.event-profile-date{
+    color:#442066;
+    font-family:roboto;
+    font-size:13px;
+}
+.event-profile-review{
+    border:none;
+    outline:none;
+    cursor:pointer;
+    color:#6A6A6A;
+}
+
+.event-profile-details-cnt{
+    display:flex;
+    flex-direction:column;
+
+}
+
+.event-profile-heading{
+    color:#0e0f0f ;
+    font-size:25px;
+    font-family:roboto;
+    font-weight:500;
+}
+
+.event-profile-rating{
+    color:#999e9e ;
+    font-size:15px;
+}
+.event-profile-star-icon{
+    color:#ef680b;
+}
+
+.event-profile-location{
+    color:#999e9e;
+    font-size:15px;
+}
+.event-profile-location-icon{
+    color:#ef680b;
+}
