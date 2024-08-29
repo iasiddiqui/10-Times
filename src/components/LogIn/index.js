@@ -1,85 +1,90 @@
-import {Component} from 'react'
-import { FaRegUser } from "react-icons/fa";
-import { RiLockPasswordLine } from "react-icons/ri";
-import { MdOutlineMail } from "react-icons/md";
-import './index.css'
+import React, { useState } from "react";
+import "./index.css";
 
-class Login extends Component{
-    state={isSignup : false}
+function Login() {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [showPassword, setShowPassword] = useState(false);
 
-    OnSignup=()=>{
-      this.setState({isSignup : true})
-    }
+  const handleEmailChange = (event) => {
+    setEmail(event.target.value);
+  };
 
-    renderLoginPage=()=>{
-        return(
-            <div className='login-cnt'>
-                <h1 className='login-heading'>Login</h1>
-                <form className='login-form-cnt'>
-                    <div className='input-cnt'>
-                        <label className='label-name' htmlFor="name" >Username</label>
-                        <div className='user-input-cnt'>
-                          <FaRegUser className='user-icon'/>
-                          <input className='input' id="name" type="text" placeholder='Enter username or email'/>
-                        </div>
-                        
-                    </div>
-                    <div className='input-cnt'>
-                        <label className='label-name' htmlFor="password">Password</label>
-                        <div className='user-input-cnt'>
-                            <RiLockPasswordLine className='user-icon'/>
-                            <input className='input' id="password" type="password" placeholder='Enter Password' maxlength="8" pattern=".{8,}" title="Password must be at least 8 characters long" required/>
-                        </div>
-                        
-                    </div>
-                    <button type="submit" className='login-button'>Login</button>
-                </form>
-                <p className='signup-para'>Or <br/> <span className='span-signup' onClick={this.OnSignup}>SignUp</span></p>
-            </div>
-        )
-    }
+  const handlePasswordChange = (event) => {
+    setPassword(event.target.value);
+  };
 
-    renderSignupPage=()=>{
-        return(
-            <div className='login-cnt'>
-                <h1 className='login-heading'>SignUp</h1>
-                <form className='login-form-cnt'>
-                    <div className='input-cnt signup-cnt'>
-                        <label className='label-name' htmlFor="email" >Email</label>
-                        <div className='user-input-cnt'>
-                          <MdOutlineMail className='user-icon'/>
-                          <input className='input' id="name" type="email" placeholder='Enter email'/>
-                        </div>
-                    </div> 
-                    <div className='input-cnt signup-cnt'>
-                        <label className='label-name' htmlFor="name" >Username</label>
-                        <div className='user-input-cnt'>
-                          <FaRegUser className='user-icon'/>  
-                          <input className='input' id="name" type="text" placeholder='Enter username'/>
-                        </div>
-                        
-                    </div>
-                    <div className='input-cnt signup-cnt'>
-                        <label className='label-name' htmlFor="password">Password</label>
-                        <div className='user-input-cnt'>
-                          <RiLockPasswordLine className='user-icon'/>
-                          <input className='input' id="password" type="password" placeholder='Enter Password' maxlength="8" pattern=".{8,}" title="Password must be at least 8 characters long" required/>
-                        </div>
-                       
-                    </div>
-                    <button type="submit" className='login-button signup-button'>Sign up</button>
-                </form>
-                
-            </div>
-        )
-    }
-    render(){
-        const {isSignup}=this.state
-        return(
-            <div className='register-page'>
-                {isSignup ? this.renderSignupPage() : this.renderLoginPage()}
-            </div>
-        )
-    }
+  const handleTogglePassword = () => {
+    setShowPassword(!showPassword);
+  };
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    // Submit login form data
+    console.log("Email:", email);
+    console.log("Password:", password);
+  };
+
+  return (
+    <div className="container">
+      <form onSubmit={handleSubmit}>
+        <h2>Login or signup</h2>
+        <div className="form-group">
+          <label htmlFor="email">Email:</label>
+          <input
+            type="email"
+            id="email"
+            value={email}
+            onChange={handleEmailChange}
+            required
+          />
+        </div>
+        <div className="form-group">
+          <label htmlFor="password">Password:</label>
+          <input
+            type={showPassword ? "text" : "password"}
+            id="password"
+            value={password}
+            onChange={handlePasswordChange}
+            required
+          />
+          <span className="password-toggle" onClick={handleTogglePassword}>
+            {showPassword ? "Hide" : "Show"}
+          </span>
+        </div>
+        <button className="login" type="submit">Login</button>
+        <p className="signup">
+          Don't have an account? <a href="#">Sign up</a>
+        </p>
+        <div className="social-login">
+          <button className="google-button">
+            <img
+              src="https://freelogopng.com/images/all_img/1657952440google-logo-png-transparent.png"
+              alt="Google"
+            />
+           <a href="#">Continue with Google </a>
+          </button>
+          <button className="linkedin-button">
+            <img src="https://www.linkedin.com/favicon.ico" alt="LinkedIn" />
+            <a href="#">Continue with LinkedIn</a>
+          </button>
+        </div>
+        <p>Or continue with your phone</p>
+        <input type="tel" placeholder="Enter your phone number" />
+        <div className="checkbox">
+          <input type="checkbox" id="terms" />
+          <label className="terms" htmlFor="terms">
+            I agree to <a href="#">Privacy Policy</a> and acknowledge to receive
+            communication from 10times
+          </label>
+        </div>
+        <div className="next-button">
+            <a className="next" href="#">Next</a>
+
+        </div>
+      </form>
+    </div>
+  );
 }
-export default Login
+
+export default Login;

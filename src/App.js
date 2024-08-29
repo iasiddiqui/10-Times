@@ -4,6 +4,7 @@ import Login from './components/LogIn'
 import TopEvent from  './components/Topevents'
 import Venues from './components/Venues'
 import './App.css';
+import EventTarget from './components/EventItem/index'
 const App=()=>(
   <>
    <BrowserRouter>
@@ -12,6 +13,7 @@ const App=()=>(
       <Route path="/login" element={<Login/>}></Route>
       <Route path="/top" element={<TopEvent/>}></Route>
       <Route path="/venue" element={<Venues/>}></Route>
+      <Route path="/event" element={<EventTarget/>}></Route>
      </Routes>
    </BrowserRouter>
   </>

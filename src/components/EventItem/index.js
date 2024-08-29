@@ -5,8 +5,8 @@ import { FaLocationDot } from "react-icons/fa6";
 import './index.css'
 
 const EventItem=()=>{
-        const {eventDetails}=this.props
-        const { eventName, date, location,  rating}=eventDetails
+        const { eventDetails }=this.props
+        const { eventName, date, location ,  rating}=eventDetails
     return(
         <div className='event-items-container'>
             <Header/>
