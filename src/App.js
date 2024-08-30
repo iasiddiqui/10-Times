@@ -11,6 +11,7 @@ const App=()=>(
      <Routes>
       <Route path="/" element={<Home/>}></Route>
       <Route path="/login" element={<Login/>}></Route>
+      <Route path="/signup" element={<Login/>}></Route>
       <Route path="/top" element={<TopEvent/>}></Route>
       <Route path="/venue" element={<Venues/>}></Route>
       <Route path="/event" element={<EventTarget/>}></Route>
