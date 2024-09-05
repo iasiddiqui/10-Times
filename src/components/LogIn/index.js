@@ -91,7 +91,7 @@ function AuthForm() {
                 placeholder="Enter your password"
               />
               <span className="password-toggle" onClick={handleTogglePassword}>
-                {showPassword ? <VisibilityOffIcon/> : <VisibilityIcon/>}
+                {showPassword ? <VisibilityOffIcon /> : <VisibilityIcon />}
               </span>
             </div>
             {!isLogin && (
@@ -107,6 +107,15 @@ function AuthForm() {
                 />
               </div>
             )}
+
+            {isLogin && (
+              <div className="forgot-password">
+                <a href="#" onClick={(e) => e.preventDefault()}>
+                  Forgot Password?
+                </a>
+              </div>
+            )}
+
             <button className="login" type="submit">
               {isLogin ? "Login" : "Sign Up"}
             </button>
@@ -114,7 +123,7 @@ function AuthForm() {
               {isLogin ? (
                 <>
                   Don't have an account?{" "}
-                  <a c href="#" onClick={handleToggleForm}>
+                  <a href="#" onClick={handleToggleForm}>
                     Sign up
                   </a>
                 </>

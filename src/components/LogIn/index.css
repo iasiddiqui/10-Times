@@ -66,6 +66,22 @@ input[type="tel"] {
     cursor: pointer;
 }
 
+.forgot-password {
+    text-align: right;
+    margin-top: -30px;
+    margin-bottom: 15px;
+  }
+  
+  .forgot-password a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+  }
+  
+  .forgot-password a:hover {
+    text-decoration: underline;
+  }
+  
+
 button[type="submit"] {
     width: 100%;
     padding: 10px;
