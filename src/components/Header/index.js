@@ -40,7 +40,7 @@ const Header=()=>{
                     
                         <li className='list-item add-cnt'>
                             <IoAddSharp size={30}/> 
-                            <Link className="link-item add-para" to="/addevent"><p className='add-para'>Add Event</p></Link>
+                            <Link className="link-item add-para" to="/add-event"><p className='add-para'>Add Event</p></Link>
                         </li>
 
                         <li className='list-item'>
