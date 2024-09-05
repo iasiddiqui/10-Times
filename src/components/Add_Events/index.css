@@ -27,12 +27,31 @@ input[type="time"],
 textarea,
 .MuiTextField-root {
     width: 100%;
-    padding: 10px;
+    padding: 5px;
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
     font-size: 16px;
     margin-bottom: 10px;
+}
+
+.MuiPopover-paper {
+    min-width: 300px; /* Adjust width as needed */
+    max-width: 100% !important; /* Ensure it does not overflow */
+}
+
+.MuiCalendarPicker-root {
+    width: 100%; /* Ensure the calendar picker takes full width */
+}
+
+.MuiDatePicker-calendarHeader {
+    text-align: center; /* Center the month and year */
+    font-weight: bold;
+    font-size: 16px; /* Adjust font size as needed */
+}
+
+.MuiDatePicker-calendarHeaderButton {
+    min-width: 80px; /* Ensure buttons have enough space */
 }
 
 

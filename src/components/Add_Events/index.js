@@ -4,6 +4,19 @@ import { DatePicker } from '@mui/x-date-pickers';
 import TextField from '@mui/material/TextField';
 import { LocalizationProvider } from '@mui/x-date-pickers';
 import { AdapterDateFns } from '@mui/x-date-pickers/AdapterDateFns';
+import ReactQuill from 'react-quill';
+import 'react-quill/dist/quill.snow.css'; // Import Quill styles
+import { Select, MenuItem, Checkbox, ListItemText, InputLabel, FormControl } from '@mui/material';
+
+const categories = [
+  'Technology',
+  'Education',
+  'Health',
+  'Sports',
+  'Arts',
+  'Business',
+  'Entertainment',
+];
 
 const AddEvent = () => {
   const [eventTitle, setEventTitle] = useState('');
@@ -15,6 +28,8 @@ const AddEvent = () => {
   const [price, setPrice] = useState(0);
   const [capacity, setCapacity] = useState(0);
   const [aboutOpportunity, setAboutOpportunity] = useState('');
+  const [selectedCategories, setSelectedCategories] = useState([]);
+  const [keywords, setKeywords] = useState('');
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -24,15 +39,22 @@ const AddEvent = () => {
       startTime,
       endTime,
       location,
+      subject,
       price,
       capacity,
       aboutOpportunity,
+      categories: selectedCategories,
+      keywords,
     };
     console.log('Event data: ', eventData);
   };
 
-  const handleOpportunityChange = (event) => {
-    setAboutOpportunity(event.target.value);
+  const handleOpportunityChange = (value) => {
+    setAboutOpportunity(value); // Using the value from ReactQuill
+  };
+
+  const handleCategoryChange = (event) => {
+    setSelectedCategories(event.target.value);
   };
 
   return (
@@ -53,7 +75,7 @@ const AddEvent = () => {
         <div>
           <label>Event Date</label>
           <DatePicker 
-            label="Select Date"
+            label ="Select Date"
             value={startDate} 
             onChange={(date) => setStartDate(date)} 
             renderInput={(params) => <TextField {...params} />}
@@ -95,15 +117,52 @@ const AddEvent = () => {
             required 
           />
         </div>
-        {/* subject */}
+
+        {/* Subject */}
         <div>
-            <label>Subject</label>
-            <input
+          <label>Subject</label>
+          <input
             type="text"
             value={subject}
             onChange={(e) => setSubject(e.target.value)}
-            placeholder= "Enter Subject"
-            />
+            placeholder="Enter Subject"
+          />
+        </div>
+
+        {/* Categories */}
+        <div>
+          <FormControl fullWidth>
+            <InputLabel id="categories-label">Choose Categories</InputLabel>
+            <Select
+              labelId="categories-label"
+              multiple
+              value={selectedCategories}
+              onChange={handleCategoryChange}
+              renderValue={(selected) => (
+                <div>
+                  {selected.length > 0 ? selected.join(', ') : 'Choose Categories'}
+                </div>
+              )}
+            >
+              {categories.map((category) => (
+                <MenuItem key={category} value={category}>
+                  <Checkbox checked={selectedCategories.indexOf(category) > -1} />
+                  <ListItemText primary={category} />
+                </MenuItem>
+              ))}
+            </Select>
+          </FormControl>
+        </div>
+
+        {/* Keywords */}
+        <div>
+          <label>Keywords</label>
+          <input
+            type="text"
+            value={keywords}
+            onChange={(e) => setKeywords(e.target.value)}
+            placeholder="Enter Keywords"
+          />
         </div>
 
         {/* Ticket Price */}
@@ -130,14 +189,15 @@ const AddEvent = () => {
           />
         </div>
 
-        {/* About Opportunity */}
+        {/* About Opportunity with Rich Text Editor */}
         <div>
           <label htmlFor="aboutOpportunity">Summary:</label>
-          <textarea
-            id="aboutOpportunity"
+          <ReactQuill
+            theme="snow"
             value={aboutOpportunity}
             onChange={handleOpportunityChange}
             placeholder="Mention all the details of the opportunity, including rules, eligibility, process, format, etc."
+            required
           />
           <p>Minimum Word Limit: 500</p>
           <p>Guidelines:</p>
