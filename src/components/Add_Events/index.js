@@ -72,7 +72,7 @@ const AddEvent = () => {
 
   const handleKeywordChange = (e) => {
     const input = e.target.value;
-    const keywordArray = input.split(",").map((kw) => kw.trim()); // Split by comma and trim whitespace
+    const keywordArray = input.split(",").map((kw) => kw.trim());
 
     // Check for maximum 5 keywords
     if (keywordArray.length > 5) {
@@ -131,7 +131,7 @@ const AddEvent = () => {
         <label>Event Date</label>
         <input
           type="date"
-          value={startDate.toISOString().split('T')[0]} // Format date as yyyy-mm-dd
+          value={startDate.toISOString().split('T')[0]} 
           onChange={(e) => setStartDate(new Date(e.target.value))}
           required
         />
