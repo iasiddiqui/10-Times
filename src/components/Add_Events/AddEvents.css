@@ -72,6 +72,28 @@ textarea {
     flex: 1; 
 }
 
+.start-time, .end-time,.open-date{
+    align-items: center;
+    text-align: center;
+    margin-bottom: -2%;
+    margin-top: -2%;
+}
+@keyframes blink {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+.open-date{
+    animation: blink 1.5s infinite;
+    color: red;
+
+}
 
 input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {
@@ -111,6 +133,82 @@ ul {
 ul li {
     margin-bottom: 8px;
 }
+
+.radio-group-row {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+  }
+  
+  .MuiFormControlLabel-root {
+    margin-right: 20px; 
+  }
+  
+ 
+.keyword-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.keyword-box {
+  background-color: white;
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  font-size: 14px;
+  color: #333;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+input {
+  width: 100%;
+}
+
+/* Style for Date Picker Container */
+.date-picker-container {
+    margin-bottom: 16px; /* Space below the date picker */
+  }
+  
+  .date-picker-container label {
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 8px; /* Space between label and input */
+    display: block; /* Ensures label is on its own line */
+  }
+  
+  /* Style for Date Picker Input */
+  .date-picker-container input[type="date"] {
+    width: 100%; /* Full width of the container */
+    padding: 8px;
+    border: 1px solid #ccc; /* Light gray border */
+    border-radius: 4px; /* Rounded corners */
+    font-size: 16px;
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+  }
+  
+  .date-picker-container input[type="date"]:focus {
+    border-color: #007bff; /* Blue border on focus */
+    outline: none; /* Remove default outline */
+  }
+  
+  /* Optional: Styling for Invalid Input (If you plan to show validation messages) */
+  .date-picker-container input[type="date"].error {
+    border-color: #dc3545; /* Red border for error state */
+  }
+  
+
+  
+  
+@media (max-width: 600px) {
+    .radio-group-row {
+      flex-direction: column;
+    }
+  }
 
 @media (max-width: 600px) {
     

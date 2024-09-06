@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import "./index.css";
+import "./Login.css";
 import VisibilityIcon from '@mui/icons-material/Visibility';
 import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';
 
@@ -138,14 +138,14 @@ function AuthForm() {
             </p>
             {isLogin && (
               <div className="social-login">
-                <button className="social-button google-button">
+                <button className="google-button">
                   <img
                     src="https://freelogopng.com/images/all_img/1657952440google-logo-png-transparent.png"
                     alt="Google"
                   />
                   Continue with Google
                 </button>
-                <button className="social-button linkedin-button">
+                <button className="linkedin-button">
                   <img
                     src="https://www.linkedin.com/favicon.ico"
                     alt="LinkedIn"

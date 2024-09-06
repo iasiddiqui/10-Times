@@ -1,10 +1,12 @@
+/* Main wrapper for background, stays the same */
 .background-wrapper {
     position: relative;
     width: 100%;
     height: 100vh; 
     overflow: hidden;
-   }
+}
 
+/* Background image styling */
 .background-wrapper::before {
     content: "";
     position: absolute;
@@ -12,42 +14,40 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-image: url('https://images.pexels.com/photos/2833037/pexels-photo-2833037.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'); 
-    background-size: cover; 
+    background-image: url('https://images.pexels.com/photos/2833037/pexels-photo-2833037.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
+    background-size: cover;
     background-position: center;
     filter: blur(5px);
     z-index: -1;
-  }
-  
-  .container {
-    position: relative; 
-    width: 400px;
+}
+
+/* Container width - responsive settings */
+.container {
+    position: relative;
+    width: 90%; /* Adjusted for smaller screens */
+    max-width: 400px; /* Limit maximum size */
     margin: 0 auto;
-    padding: 20px;
-    margin-top: 10px;
+    /* padding: 20px; */
+    margin-top: 1%;
     border: 1px solid #ccc;
     border-radius: 5px;
-    background-color: rgba(255, 255, 255, 0.734);
+    background-color: rgba(255, 255, 255, 0.685);
     z-index: 0;
-  }
-  
+}
 
+/* Center heading and adjust margin */
 h2 {
     text-align: center;
-    margin-bottom:3% ;
+    margin-bottom: 3%;
     margin-top: -10px;
 }
 
+/* Form group with responsive margin */
 .form-group {
     margin-bottom: 15px;
-    
 }
 
-label {
-    display: block;
-    margin-bottom: 5px;
-}
-
+/* Input fields - responsive sizing */
 input[type="text"],
 input[type="email"],
 input[type="password"],
@@ -59,6 +59,7 @@ input[type="tel"] {
     box-sizing: border-box;
 }
 
+/* Adjust password toggle icon */
 .password-toggle {
     position: relative;
     top: -30px;
@@ -66,36 +67,30 @@ input[type="tel"] {
     cursor: pointer;
 }
 
+/* Forgot password link positioning */
 .forgot-password {
     text-align: right;
     margin-top: -30px;
     margin-bottom: 15px;
-  }
-  
-  .forgot-password a {
-    color: rgb(0, 0, 0);
-    text-decoration: none;
-  }
-  
-  .forgot-password a:hover {
-    text-decoration: underline;
-  }
-  
+}
 
+/* Button for submit */
 button[type="submit"] {
     width: 100%;
     padding: 10px;
-    background-color:rgb(7, 7, 167);
+    background-color: rgb(7, 7, 167);
     color: white;
     border: none;
     border-radius: 3px;
     cursor: pointer;
 }
 
+/* Adjust hover state */
 .login:hover {
     background-color: rgb(71, 71, 223);
 }
 
+/* Social login buttons layout for responsiveness */
 .social-login {
     display: flex;
     justify-content: space-between;
@@ -104,6 +99,8 @@ button[type="submit"] {
 
 .google-button,
 .linkedin-button {
+    background-color: #fff;
+    color: black;
     width: 48%;
     padding: 10px;
     border: 1px solid #ccc;
@@ -124,10 +121,11 @@ button[type="submit"] {
 
 .google-button:hover,
 .linkedin-button:hover {
-    background-color: #f1f1f1; 
+    background-color: #f1f1f1;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.325);
 }
-a{
+
+a {
     text-decoration: none;
     color: black;
 }
@@ -137,7 +135,8 @@ a{
 }
 
 .checkbox input[type="checkbox"] {
-    margin-right: 5px;
+    margin-left: -45%;
+
 }
 
 .terms {
@@ -146,10 +145,9 @@ a{
 }
 
 .next-button {
-
     width: 10%;
     padding: 5px;
-    background-color:rgb(7, 7, 167);
+    background-color: rgb(7, 7, 167);
     color: white;
     border: none;
     border-radius: 3px;
@@ -157,23 +155,83 @@ a{
     margin: 0 auto;
     text-align: center;
 }
-.next-button:hover{
-    background-color: rgb(71, 71, 223); 
+
+.next-button:hover {
+    background-color: rgb(71, 71, 223);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
-.next-button .next{
+
+.next-button .next {
     color: white;
 }
-.signup a{
+
+.signup a {
     color: red;
 }
-.signup a:hover{
+
+.signup a:hover {
     color: blue;
 }
-.confirm-password{
+
+.confirm-password {
     margin-top: -7%;
     margin-bottom: 7%;
 }
-.password-toggle{
+
+.password-toggle {
     margin-left: 7%;
+}
+
+/* Responsive media queries */
+@media (max-width: 768px) {
+    .container {
+        width: 100%;
+        padding: 15px;
+        margin-top: 20px;
+    }
+
+    .social-login {
+        flex-direction: column;
+        align-items: center;
+        
+    }
+
+    .google-button,
+    .linkedin-button {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    .google-button,
+    .linkedin-button .social-button {
+        text-align: center;
+
+    }
+
+    .password-toggle {
+        left: 85%;
+    }
+
+    .next-button {
+        width: 20%;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        width: 95%;
+        padding: 10px;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+    }
+
+    button[type="submit"] {
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    .next-button {
+        width: 30%;
+    }
 }
