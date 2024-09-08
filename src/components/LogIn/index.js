@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import "./Login.css";
+import styles from "./Login.module.css"; // Importing the CSS Module
 import VisibilityIcon from '@mui/icons-material/Visibility';
 import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';
 
@@ -46,12 +46,12 @@ function AuthForm() {
   };
 
   return (
-    <div className="background-wrapper">
-      <div className="container">
+    <div className={styles['background-wrapper']}> {/* Use curly braces and styles */}
+      <div className={styles.container}>
         {showOtpVerification ? (
-          <form onSubmit={handleVerifyOtp} className="otp-form">
+          <form onSubmit={handleVerifyOtp} className={styles['otp-form']}>
             <h2>Verify OTP</h2>
-            <div className="form-group">
+            <div className={styles['form-group']}>
               <label htmlFor="otp">OTP:</label>
               <input
                 type="text"
@@ -62,14 +62,14 @@ function AuthForm() {
                 placeholder="Enter OTP"
               />
             </div>
-            <button className="submit-button" type="submit">
+            <button className={styles['submit-button']} type="submit">
               Verify OTP
             </button>
           </form>
         ) : (
-          <form onSubmit={handleSubmit} className="auth-form">
+          <form onSubmit={handleSubmit} className={styles['auth-form']}>
             <h2>{isLogin ? "Login" : "Sign Up"}</h2>
-            <div className="form-group">
+            <div className={styles['form-group']}>
               <label htmlFor="email">Email:</label>
               <input
                 type="email"
@@ -80,7 +80,7 @@ function AuthForm() {
                 placeholder="Enter your email"
               />
             </div>
-            <div className="form-group">
+            <div className={styles['form-group']}>
               <label htmlFor="password">Password:</label>
               <input
                 type={showPassword ? "text" : "password"}
@@ -90,12 +90,12 @@ function AuthForm() {
                 required
                 placeholder="Enter your password"
               />
-              <span className="password-toggle" onClick={handleTogglePassword}>
+              <span className={styles['password-toggle']} onClick={handleTogglePassword}>
                 {showPassword ? <VisibilityOffIcon /> : <VisibilityIcon />}
               </span>
             </div>
             {!isLogin && (
-              <div className="confirm-password">
+              <div className={styles['form-group']}>
                 <label htmlFor="confirm-password">Confirm Password:</label>
                 <input
                   type={showPassword ? "text" : "password"}
@@ -109,17 +109,17 @@ function AuthForm() {
             )}
 
             {isLogin && (
-              <div className="forgot-password">
+              <div className={styles['forgot-password']}>
                 <a href="#" onClick={(e) => e.preventDefault()}>
                   Forgot Password?
                 </a>
               </div>
             )}
 
-            <button className="login" type="submit">
+            <button className={styles['login']} type="submit">
               {isLogin ? "Login" : "Sign Up"}
             </button>
-            <p className="signup">
+            <p className={styles['signup']}>
               {isLogin ? (
                 <>
                   Don't have an account?{" "}
@@ -137,15 +137,15 @@ function AuthForm() {
               )}
             </p>
             {isLogin && (
-              <div className="social-login">
-                <button className="google-button">
+              <div className={styles['social-login']}>
+                <button className={styles['google-button']}>
                   <img
                     src="https://freelogopng.com/images/all_img/1657952440google-logo-png-transparent.png"
                     alt="Google"
                   />
                   Continue with Google
                 </button>
-                <button className="linkedin-button">
+                <button className={styles['linkedin-button']}>
                   <img
                     src="https://www.linkedin.com/favicon.ico"
                     alt="LinkedIn"
@@ -156,9 +156,9 @@ function AuthForm() {
             )}
             <p>Or continue with your phone</p>
             <input type="tel" placeholder="Enter your phone number" />
-            <div className="checkbox">
+            <div className={styles['checkbox']}>
               <input type="checkbox" id="terms" />
-              <label className="terms" htmlFor="terms">
+              <label className={styles['terms']} htmlFor="terms">
                 I agree to{" "}
                 <a href="#" onClick={(e) => e.preventDefault()}>
                   Privacy Policy
@@ -166,8 +166,8 @@ function AuthForm() {
                 and acknowledge to receive communication from 10times
               </label>
             </div>
-            <div className="next-button">
-              <a className="next" href="#" onClick={(e) => e.preventDefault()}>
+            <div className={styles['next-button']}>
+              <a className={styles['next']} href="#" onClick={(e) => e.preventDefault()}>
                 Next
               </a>
             </div>

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./AddEvents.css";
+import styles from './Add.Events.module.css';
 import TextField from "@mui/material/TextField";
 import ReactQuill from "react-quill";
 import "react-quill/dist/quill.snow.css";
@@ -98,7 +98,7 @@ const AddEvent = () => {
   return (
     <form className="add-events" onSubmit={handleSubmit}>
       {/* Event Format Dropdown */}
-      <div>
+      <div className="register">
         <FormControl fullWidth>
           <InputLabel id="format-label">Select Event Format</InputLabel>
           <Select
@@ -313,7 +313,7 @@ const AddEvent = () => {
           </ul>
         </div>
 
-        <button type="submit">Create Event</button>
+        <button type="submit" >Create Event</button>
       </form>
   );
 };
