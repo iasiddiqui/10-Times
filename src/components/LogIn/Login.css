@@ -98,34 +98,37 @@ button[type="submit"] {
     background-color: rgb(71, 71, 223);
 }
 
-.social-login {
+.social-loginn {
     display: flex;
     justify-content: space-between;
     margin-bottom: 15px;
 }
 
-.google-button,
-.linkedin-button {
+.google-buttonn,
+.linkedin-buttonn {
+    background-color: white;
+    color: black;
     width: 48%;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 3px;
     cursor: pointer;
     display: flex;
+    white-space: nowrap;
     align-items: center;
     justify-content: space-between;
     transition: background-color 0.3s, box-shadow 0.3s;
 }
 
-.google-button img,
-.linkedin-button img {
+.google-buttonn img,
+.linkedin-buttonn img {
     width: 20px;
     height: 20px;
     margin-right: 10px;
 }
 
-.google-button:hover,
-.linkedin-button:hover {
+.google-buttonn:hover,
+.linkedin-buttonn:hover {
     background-color: #f1f1f1; 
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.325);
 }
