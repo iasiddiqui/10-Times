@@ -6,6 +6,7 @@ import Venues from "./components/Venues";
 import "./App.css";
 import EventTarget from "./components/EventItem/index";
 import AddEvent from "./components/Add_Events";
+import AddEventsHome from "./components/AddEvents_Home/AddEventsHome";
 
 const App = () => (
   <>
@@ -17,6 +18,7 @@ const App = () => (
         <Route path="/venue" element={<Venues />}></Route>
         <Route path="/event" element={<EventTarget />}></Route>
         <Route path="/add-event" element={<AddEvent />}></Route>
+        <Route path="/add-event-home" element={<AddEventsHome/>}></Route>
       </Routes>
     </BrowserRouter>
   </>
