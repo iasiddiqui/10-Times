@@ -14,6 +14,7 @@ import {
   RadioGroup,
   FormControlLabel,
   FormLabel,
+  LinearProgress,
 } from "@mui/material";
 
 const categories = [
@@ -28,7 +29,7 @@ const categories = [
 
 const AddEvent = () => {
   const [eventTitle, setEventTitle] = useState("");
-  const [startDate, setStartDate] = useState(new Date());
+  const [startDate, setStartDate] = useState(""); // Initialize as an empty string
   const [startTime, setStartTime] = useState("");
   const [endTime, setEndTime] = useState("");
   const [location, setLocation] = useState("");
@@ -40,7 +41,28 @@ const AddEvent = () => {
   const [keywords, setKeywords] = useState([]);
   const [error, setError] = useState("");
   const [eventFormat, setEventFormat] = useState("");
-  const [eventType, setEventType] = useState("inperson");
+  const [eventType, setEventType] = useState("");
+
+  // Calculate progress based on fields filled
+  const calculateProgress = () => {
+    const fields = [
+      eventTitle,
+      startDate,
+      startTime,
+      endTime,
+      location,
+      theme,
+      price,
+      capacity,
+      aboutOpportunity,
+      eventFormat,
+      eventType,
+    ];
+
+    const filledFields = fields.filter((field) => field !== "" && field !== 0);
+    const progress = (filledFields.length / fields.length) * 100;
+    return progress;
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -74,13 +96,11 @@ const AddEvent = () => {
     const input = e.target.value;
     const keywordArray = input.split(",").map((kw) => kw.trim());
 
-    // Check for maximum 5 keywords
     if (keywordArray.length > 5) {
       setError("You can only add up to 5 keywords.");
       return;
     }
 
-    // Check if total length of keywords is less than 60
     const totalLength = keywordArray.reduce(
       (acc, curr) => acc + curr.length,
       0
@@ -90,55 +110,57 @@ const AddEvent = () => {
       return;
     }
 
-    // No error, update keywords
     setKeywords(keywordArray);
     setError("");
   };
 
   return (
-    <form className="add-events" onSubmit={handleSubmit}>
-      {/* Event Format Dropdown */}
-      <div>
-        <FormControl fullWidth>
-          <InputLabel id="format-label">Select Event Format</InputLabel>
-          <Select
-            labelId="format-label"
-            value={eventFormat}
-            onChange={(e) => setEventFormat(e.target.value)}
+    <div className="add-event-container">
+      {/* Progress Bar */}
+      <div className="progress-bar">
+        <LinearProgress variant="determinate" value={calculateProgress()} />
+        <p>{Math.round(calculateProgress())}% Completed</p>
+      </div>
+      <form className="add-events" onSubmit={handleSubmit}>
+        {/* Form Fields */}
+        <div>
+          <FormControl fullWidth>
+            <InputLabel id="format-label">Select Event Format</InputLabel>
+            <Select
+              labelId="format-label"
+              value={eventFormat}
+              onChange={(e) => setEventFormat(e.target.value)}
+              required
+            >
+              <MenuItem value="Conference">Conference</MenuItem>
+              <MenuItem value="Workshop">Workshop</MenuItem>
+              <MenuItem value="Seminar">Seminar</MenuItem>
+              <MenuItem value="Webinar">Webinar</MenuItem>
+            </Select>
+          </FormControl>
+        </div>
+
+        <div>
+          <label>Event Title</label>
+          <input
+            type="text"
+            value={eventTitle}
+            onChange={(e) => setEventTitle(e.target.value)}
             required
-          >
-            <MenuItem value="Conference">Conference</MenuItem>
-            <MenuItem value="Workshop">Workshop</MenuItem>
-            <MenuItem value="Seminar">Seminar</MenuItem>
-            <MenuItem value="Webinar">Webinar</MenuItem>
-          </Select>
-        </FormControl>
-      </div>
+          />
+        </div>
 
-      {/* Event Title */}
-      <div>
-        <label>Event Title</label>
-        <input
-          type="text"
-          value={eventTitle}
-          onChange={(e) => setEventTitle(e.target.value)}
-          required
-        />
-      </div>
+        <div class="date-picker-container">
+          <label>Event Date</label>
+          <input
+            type="date"
+            value={startDate}
+            onChange={(e) => setStartDate(e.target.value)}
+            required
+          />
+        </div>
 
-      {/* Date Picker */}
-      <div>
-        <label>Event Date</label>
-        <input
-          type="date"
-          value={startDate.toISOString().split('T')[0]} 
-          onChange={(e) => setStartDate(new Date(e.target.value))}
-          required
-        />
-      </div>
-
-      {/* Start and End Time (Side by Side) */}
-      <div className="time-container">
+        <div className="time-container">
         <div className="start-time">
           <label>Start Time</label>
           <input
@@ -162,133 +184,124 @@ const AddEvent = () => {
         </div>
       </div>
 
-      {/* Location */}
-      <div>
-        <label>Location</label>
-        <input
-          type="text"
-          value={location}
-          onChange={(e) => setLocation(e.target.value)}
-          placeholder="Enter location"
-          required
-        />
-      </div>
 
-      {/* Theme */}
-      <div>
-        <label>Theme</label>
-        <input
-          type="text"
-          value={theme}
-          onChange={(e) => setTheme(e.target.value)}
-          placeholder="Enter Theme"
-        />
-      </div>
-
-      {/* Categories */}
-      <div>
-        <FormControl fullWidth>
-          <InputLabel id="categories-label">Choose Categories</InputLabel>
-          <Select
-            labelId="categories-label"
-            multiple
-            value={selectedCategories}
-            onChange={handleCategoryChange}
-            renderValue={(selected) => (
-              <div>
-                {selected.length > 0
-                  ? selected.join(", ")
-                  : "Choose Categories"}
-              </div>
-            )}
-          >
-            {categories.map((category) => (
-              <MenuItem key={category} value={category}>
-                <Checkbox
-                  checked={selectedCategories.indexOf(category) > -1}
-                />
-                <ListItemText primary={category} />
-              </MenuItem>
-            ))}
-          </Select>
-        </FormControl>
-      </div>
-
-      {/* Event Type */}
-      <div>
-        <FormControl>
-          <FormLabel>What is the Event Type?</FormLabel>
-          <RadioGroup
-            aria-label="event-type"
-            name="eventType"
-            value={eventType}
-            onChange={(e) => setEventType(e.target.value)}
-            row // This ensures they are in a row
-          >
-            <FormControlLabel
-              value="inperson"
-              control={<Radio />}
-              label="In-person"
-            />
-            <FormControlLabel
-              value="virtual"
-              control={<Radio />}
-              label="Virtual"
-            />
-            <FormControlLabel
-              value="hybrid"
-              control={<Radio />}
-              label="Hybrid"
-            />
-          </RadioGroup>
-        </FormControl>
-      </div>
-
-      {/* Keywords */}
-      <div>
-        <label>Keywords (max 5, total letters &lt; 60):</label>
-        <input
-          type="text"
-          value={keywords.join(", ")}
-          onChange={handleKeywordChange}
-          placeholder="Enter Keywords separated by commas"
-        />
-        {error && <p style={{ color: "red" }}>{error}</p>}
-
-        <div className="keyword-container">
-          {keywords.map((keyword, index) => (
-            <span key={index} className="keyword-box">
-              {keyword}
-            </span>
-          ))}
+        <div>
+          <label>Location</label>
+          <input
+            type="text"
+            value={location}
+            onChange={(e) => setLocation(e.target.value)}
+            required
+          />
         </div>
-      </div>
 
-      {/* Ticket Price */}
-      <div>
-        <label>Ticket Price</label>
-        <input
-          type="number"
-          value={price}
-          onChange={(e) => setPrice(e.target.value)}
-          min="0"
-          required
-        />
-      </div>
+        <div>
+          <label>Theme</label>
+          <input
+            type="text"
+            value={theme}
+            onChange={(e) => setTheme(e.target.value)}
+          />
+        </div>
 
-      {/* Capacity */}
-      <div>
-        <label>Event Capacity</label>
-        <input
-          type="number"
-          value={capacity}
-          onChange={(e) => setCapacity(e.target.value)}
-          min="0"
-          required
-        />
-      </div>
+        <div>
+          <FormControl fullWidth>
+            <InputLabel id="categories-label">Choose Categories</InputLabel>
+            <Select
+              labelId="categories-label"
+              multiple
+              value={selectedCategories}
+              onChange={handleCategoryChange}
+              renderValue={(selected) => (
+                <div>
+                  {selected.length > 0
+                    ? selected.join(", ")
+                    : "Choose Categories"}
+                </div>
+              )}
+            >
+              {categories.map((category) => (
+                <MenuItem key={category} value={category}>
+                  <Checkbox
+                    checked={selectedCategories.indexOf(category) > -1}
+                  />
+                  <ListItemText primary={category} />
+                </MenuItem>
+              ))}
+            </Select>
+          </FormControl>
+        </div>
 
-        {/* About Opportunity with Rich Text Editor */}
+        <div>
+          <FormControl>
+            <FormLabel>What is the Event Type?</FormLabel>
+            <RadioGroup
+              aria-label="event-type"
+              name="eventType"
+              value={eventType}
+              onChange={(e) => setEventType(e.target.value)}
+              row
+            >
+              <FormControlLabel
+                value="inperson"
+                control={<Radio />}
+                label="In-person"
+              />
+              <FormControlLabel
+                value="virtual"
+                control={<Radio />}
+                label="Virtual"
+              />
+              <FormControlLabel
+                value="hybrid"
+                control={<Radio />}
+                label="Hybrid"
+              />
+            </RadioGroup>
+          </FormControl>
+        </div>
+
+        <div>
+          <label>Keywords (max 5, total letters &lt; 60):</label>
+          <input
+            type="text"
+            value={keywords.join(", ")}
+            onChange={handleKeywordChange}
+            placeholder="Enter Keywords separated by commas"
+          />
+          {error && <p style={{ color: "red" }}>{error}</p>}
+
+          <div className="keyword-container">
+            {keywords.map((keyword, index) => (
+              <span key={index} className="keyword-box">
+                {keyword}
+              </span>
+            ))}
+          </div>
+        </div>
+
+        <div>
+          <label>Ticket Price</label>
+          <input
+            type="number"
+            value={price}
+            onChange={(e) => setPrice(e.target.value)}
+            min="0"
+            required
+          />
+        </div>
+
+        <div>
+          <label>Event Capacity</label>
+          <input
+            type="number"
+            value={capacity}
+            onChange={(e) => setCapacity(e.target.value)}
+            min="0"
+            required
+          />
+        </div>
+
         <div>
           <label htmlFor="aboutOpportunity">Summary:</label>
           <ReactQuill
@@ -314,7 +327,8 @@ const AddEvent = () => {
         </div>
 
         <button type="submit">Create Event</button>
-      </form>
+      </form>{" "}
+    </div>
   );
 };
 

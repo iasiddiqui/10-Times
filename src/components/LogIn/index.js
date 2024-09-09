@@ -160,7 +160,7 @@ function AuthForm() {
               <input type="checkbox" id="terms" />
               <label className="terms" htmlFor="terms">
                 I agree to{" "}
-                <a href="#" onClick={(e) => e.preventDefault()}>
+                <a  href="#" onClick={(e) => e.preventDefault()}>
                   Privacy Policy
                 </a>{" "}
                 and acknowledge to receive communication from 10times
