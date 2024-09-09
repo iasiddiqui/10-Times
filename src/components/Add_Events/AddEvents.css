@@ -24,15 +24,14 @@ label {
 input[type="text"],
 input[type="number"],
 input[type="time"],
-textarea,
-.MuiTextField-root {
-    width: 100%;
-    padding: 5px;
+textarea {
+  width: 100%;
+  padding: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
-    font-size: 16px;
-    margin-bottom: 10px;
+    /* font-size: 16px; */
+    /* margin-bottom: 10px; */
 }
 
 .MuiPopover-paper {
@@ -92,6 +91,7 @@ textarea {
 .open-date{
     animation: blink 1.5s infinite;
     color: red;
+    margin-top: 2%;
 
 }
 
@@ -171,36 +171,58 @@ input {
 
 /* Style for Date Picker Container */
 .date-picker-container {
-    margin-bottom: 16px; /* Space below the date picker */
+    margin-bottom: 16px;
   }
   
   .date-picker-container label {
     font-size: 16px;
     font-weight: 500;
-    margin-bottom: 8px; /* Space between label and input */
-    display: block; /* Ensures label is on its own line */
+    margin-bottom: 8px;     display: block; 
   }
   
   /* Style for Date Picker Input */
   .date-picker-container input[type="date"] {
-    width: 100%; /* Full width of the container */
+    width: 100%; 
     padding: 8px;
-    border: 1px solid #ccc; /* Light gray border */
-    border-radius: 4px; /* Rounded corners */
+    border: 1px solid #ccc; 
+    border-radius: 4px; 
     font-size: 16px;
-    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    box-sizing: border-box; 
   }
   
   .date-picker-container input[type="date"]:focus {
-    border-color: #007bff; /* Blue border on focus */
-    outline: none; /* Remove default outline */
+    border-color: #007bff; 
+    outline: none; 
   }
   
-  /* Optional: Styling for Invalid Input (If you plan to show validation messages) */
+  
   .date-picker-container input[type="date"].error {
-    border-color: #dc3545; /* Red border for error state */
+    border-color: #dc3545; 
   }
   
+  /* Progress Bar Styles */
+.progress-bar-container {
+  width: 100%;
+  height: 10px;
+  background-color: #f3f3f3;
+  /* border-radius: 10px; */
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.progress-bar {
+  height: 100%;
+  background-color: #e5fd0c;
+  transition: width 0.3s ease;
+}
+
+.progress-bar-container p {
+  text-align: center;
+  font-size: 14px;
+  margin-top: 5px;
+  color: #333;
+}
+
 
   
   

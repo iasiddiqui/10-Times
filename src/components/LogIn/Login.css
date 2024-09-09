@@ -1,10 +1,12 @@
 .background-wrapper {
     position: relative;
     width: 100%;
-    height: 100vh; 
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
     overflow: hidden;
-    
-   }
+
+}
 
 .background-wrapper::before {
     content: "";
@@ -13,41 +15,43 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-image: url('https://images.pexels.com/photos/2833037/pexels-photo-2833037.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'); 
-    background-size: cover; 
+    background-image: url('https://images.pexels.com/photos/2833037/pexels-photo-2833037.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
+    background-size: cover;
     background-position: center;
     filter: blur(5px);
     z-index: -1;
-    
-  }
-  
-  .container {
-    position: relative; 
+
+}
+
+.container {
+    position: relative;
     width: 400px;
     margin: 0 auto;
     padding: 20px;
     margin-top: 10px;
+    margin-bottom: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
     background-color: rgba(255, 255, 255, 0.734);
     z-index: 0;
-  }
-  
+}
+
 
 h2 {
     text-align: center;
-    margin-bottom:3% ;
+    margin-bottom: 3%;
     margin-top: -10px;
 }
 
 .form-group {
     margin-bottom: 15px;
-    
+    position: relative;
 }
 
-label {
+.login-detail {
     display: block;
     margin-bottom: 5px;
+    font-weight: normal;
 }
 
 input[type="text"],
@@ -56,6 +60,7 @@ input[type="password"],
 input[type="tel"] {
     width: 100%;
     padding: 10px;
+    padding-right: 35px;
     border: 1px solid #767575;
     border-radius: 10px;
     box-sizing: border-box;
@@ -72,22 +77,22 @@ input[type="tel"] {
     text-align: right;
     margin-top: -30px;
     margin-bottom: 15px;
-  }
-  
-  .forgot-password a {
+}
+
+.forgot-password a {
     color: rgb(0, 0, 0);
     text-decoration: none;
-  }
-  
-  .forgot-password a:hover {
+}
+
+.forgot-password a:hover {
     text-decoration: underline;
-  }
-  
+}
+
 
 button[type="submit"] {
     width: 100%;
     padding: 10px;
-    background-color:rgb(7, 7, 167);
+    background-color: rgb(7, 7, 167);
     color: white;
     border: none;
     border-radius: 3px;
@@ -102,11 +107,14 @@ button[type="submit"] {
     display: flex;
     justify-content: space-between;
     margin-bottom: 15px;
+
 }
 
 .google-buttonn,
 .linkedin-buttonn {
     background-color: white;
+    /* text-align: inherit; */
+    font-size: 90%;
     color: black;
     width: 48%;
     padding: 10px;
@@ -129,10 +137,11 @@ button[type="submit"] {
 
 .google-buttonn:hover,
 .linkedin-buttonn:hover {
-    background-color: #f1f1f1; 
+    background-color: #f1f1f1;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.325);
 }
-a{
+
+a {
     text-decoration: none;
     color: black;
 }
@@ -142,19 +151,21 @@ a{
 }
 
 .checkbox input[type="checkbox"] {
-    margin-right: 5px;
+    margin-left: -47%;
+
 }
 
 .terms {
     margin-left: 10%;
     margin-top: -6%;
+    font-weight: normal;
 }
 
 .next-button {
 
     width: 10%;
     padding: 5px;
-    background-color:rgb(7, 7, 167);
+    background-color: rgb(7, 7, 167);
     color: white;
     border: none;
     border-radius: 3px;
@@ -162,24 +173,103 @@ a{
     margin: 0 auto;
     text-align: center;
 }
-.next-button:hover{
-    background-color: rgb(71, 71, 223); 
+
+.next-button:hover {
+    background-color: rgb(71, 71, 223);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
-.next-button .next{
+
+.next-button .next {
     color: white;
 }
-.signup a{
+
+.signup a {
     color: red;
 }
-.signup a:hover{
+
+.signup a:hover {
     color: blue;
 }
-.confirm-password{
+
+.confirm-password {
     margin-top: -7%;
     margin-bottom: 7%;
 }
-.password-toggle{
+
+.password-toggle {
     margin-left: 7%;
 }
 
+
+/* media query */
+
+@media (max-width: 768px) {
+    .container {
+        /* width: 100%; */
+        padding: 10px;
+        margin-top: 20px;
+    }
+
+    .google-buttonn,
+    .linkedin-buttonn {
+        font-size: 80%;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    input[type="tel"] {
+        padding: 8px;
+    }
+
+    button[type="submit"] {
+        padding: 8px;
+    }
+    
+    .next-button {
+        width: 20%;
+    }
+
+    .password-toggle {
+        right: 5px;
+    }
+
+    .checkbox input[type="checkbox"] {
+        margin-left: -25%;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        width: 100%;
+        padding: 15px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .social-loginn {
+        flex-direction:column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .google-buttonn,
+    .linkedin-buttonn {
+        /* min-width: 50%; */
+        width: 200px;
+        min-width: none;
+        margin-bottom: 10px;
+        justify-content: center;
+        text-align: center;
+        display: flex;
+        flex: 1;
+    }
+
+    .next-button {
+        width: 30%;
+    }
+
+    .checkbox input[type="checkbox"] {
+        margin-left: -20%;
+    }
+}

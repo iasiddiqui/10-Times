@@ -70,7 +70,7 @@ function AuthForm() {
           <form onSubmit={handleSubmit} className="auth-form">
             <h2>{isLogin ? "Login" : "Sign Up"}</h2>
             <div className="form-group">
-              <label htmlFor="email">Email:</label>
+              <label className="login-detail" htmlFor="email">Email:</label>
               <input
                 type="email"
                 id="email"
@@ -81,7 +81,7 @@ function AuthForm() {
               />
             </div>
             <div className="form-group">
-              <label htmlFor="password">Password:</label>
+              <label className="login-detail" htmlFor="password">Password:</label>
               <input
                 type={showPassword ? "text" : "password"}
                 id="password"
@@ -96,7 +96,7 @@ function AuthForm() {
             </div>
             {!isLogin && (
               <div className="confirm-password">
-                <label htmlFor="confirm-password">Confirm Password:</label>
+                <label className="login-detail" htmlFor="confirm-password">Confirm Password:</label>
                 <input
                   type={showPassword ? "text" : "password"}
                   id="confirm-password"
