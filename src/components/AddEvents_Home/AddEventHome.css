@@ -2,11 +2,12 @@
     height: 100vh;
     width: 100vw;
     background-color: black;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }.event-home {
     color: black;
 }
 
-p {
+.event {
     background-color: rgb(255, 255, 255);
     color: black;
     font-size: 1rem;
@@ -16,19 +17,18 @@ p {
     justify-content: center;
 }
 p span{
-    color: red;
+    color: #0781f3;
 }
 
+/* NAVBAR BEGINS */
 .logo img {
     width: 9rem;
     height: auto;
     margin-left: 1rem;
     margin-top: -0.5rem;
-    /* background-color: #ffffff64; */
+    background-color: #ffffff64;
     border-radius: 10px;
 }
-
-/* NAVBAR BEGINS */
 .navbar {
     background-color: #0e0f26da;
     padding: 1px;
@@ -52,9 +52,10 @@ p span{
     text-decoration: none;
     padding: 5px 10px;
     white-space: nowrap;
+    display: flex;
 }
 
-.navbar ul li :hover {
+.navbar ul li:hover {
     width: auto;
     color: #575470;
 }
@@ -77,10 +78,10 @@ p span{
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #023356;
+    background-color:  #0e0f26da;
     z-index: 1;
     left: 0;
-    top: 20px;
+    top: 25px;
     overflow: hidden;
     opacity: 0;
     visibility: hidden;
@@ -88,7 +89,9 @@ p span{
     margin: 0;
     padding: 0;
     border: 1px solid black;
+    justify-content: center;
 }
+
 
 .dropdown-content li {
     display: block;
@@ -122,11 +125,174 @@ p span{
     visibility: visible;
 }
 
+
+/* hero section  */
+.hero-section {
+    position: relative;
+    width: 100%;
+    z-index: 0;
+}
+
+.hero-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.655); 
+    z-index: 0;
+}
+
+.hero-section img {
+    width: 100vw;
+    height: 40vh;
+    object-fit: cover;
+}
+
+.overlays {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+    color: white;
+    padding: 1rem;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 1000px;
+}
+
+.overlay {
+    color: #ffffff;
+    font-size: 1rem;
+    text-align: center;
+    margin-top: 0%;
+    z-index: 0;
+}
+.event-date h2{
+    color: #0781f3;
+    background-color: #fff;
+    padding: 4px;
+    margin-top: -10%;
+    border-radius: 5px;
+}
+
+
+.overlay-box-container {
+    display: flex;
+    flex-direction: row; 
+    justify-content: center;
+    width: 100%; 
+    white-space: nowrap;
+    gap: 10px;
+}
+
+.overlay-box {
+    background: rgba(189, 150, 150, 0.374); 
+    border: 1px solid black;
+    padding: 0.5rem;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: normal !important;
+    flex: 1;
+    gap: 10px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.link {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+    display: block;
+}
+.overlay-box:hover {
+    background-color: #fff;
+    color: #0781f3;
+}
+.overlay-box:hover .link {
+    color: #0781f3;
+}
+
+.overlay-box-early {
+    background: rgb(255, 255, 255); 
+    border: 1px solid black;
+    padding: 0.5rem;
+    border-radius: 5px;
+    text-align: center;
+    flex: 1;
+    gap: 10px;
+    transition: background-color 0.3s, color 0.3s;
+}
+.overlay-box-early .early{
+    color: #0781f3;
+    font-weight: bold;
+}
+.overlay-box-early:hover{
+    background: rgba(189, 150, 150, 0.374); 
+    color: white;
+    border: 1px solid black;
+    padding: 0.5rem;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: normal ;
+    flex: 1;
+    gap: 10px;
+}
+
+/* second hero */
+.second-hero {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: 0 auto;
+    background-color: rgb(169, 166, 166);
+    border: 1px solid black;
+    box-shadow: #575470;
+    padding: 1rem;
+}
+
+.online-event {
+    align-self: flex-start;
+    margin-bottom: 1rem;
+}
+
+.second-para {
+    text-align: center; 
+    margin: 1rem 0; 
+}
+
+.hero-buttons {
+    display: flex;
+    justify-content: flex-end; 
+    gap: 1rem; 
+}
+
+.hero-button {
+    width: auto; 
+    padding: 5px 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 @media (max-width: 768px) {
     .navbar ul {
         display: none; 
         flex-direction: column;
-        /* align-items: stretch; */
+        align-items: stretch;
     }
 
     .navbar ul.active {
@@ -166,4 +332,3 @@ p span{
         margin-right: 2rem;
     }
 }
-
