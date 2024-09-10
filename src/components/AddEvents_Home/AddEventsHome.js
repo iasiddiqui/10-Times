@@ -17,15 +17,14 @@ const AddEventsHome = () => {
         from your home or work.
       </p>
 
-      {/* navbar start */}
-
+      {/* Navbar */}
+      <nav className="navbar">
       <div className="logo">
         <img
           src="https://www.stripeconferences.com/wp-content/uploads/2023/11/stripe-conferences-logo2-1-1400x387.png"
-          alt="Logo"
+          alt="Event Logo"
         />
       </div>
-      <nav className="navbar">
         <div className="menu-icon" onClick={toggleMenu}>
           &#9776;
         </div>
@@ -65,7 +64,7 @@ const AddEventsHome = () => {
             </Link>
             <ul className="dropdown-content">
               <li>
-                <Link to="l">Final Program</Link>
+                <Link to="">Final Program</Link>
               </li>
               <li>
                 <Link to="">Scientific Session</Link>
@@ -128,11 +127,10 @@ const AddEventsHome = () => {
         </ul>
       </nav>
 
-      {/* hero section start */}
-
+      {/* Hero Section */}
       <div className="hero-section">
         <img
-          src="https://img.freepik.com/free-photo/people-taking-part-high-protocol-event_23-2150951245.jpg?t=st=1725953947~exp=1725957547~hmac=870bf87e89aadfba54e5cb2f61728af0456bc176069f81da18d35a39ed3985b1&w=740"
+          src="https://img.freepik.com/free-photo/people-taking-part-high-protocol-event_23-2150951245.jpg"
           alt="Event"
         />
         <div className="overlays">
@@ -164,26 +162,79 @@ const AddEventsHome = () => {
           </div>
         </div>
       </div>
+
+      {/* Second Hero Section */}
       <div className="second-hero">
         <h3 className="online-event">Online Event</h3>
         <p className="second-para">
-          <apan>Contact Info</apan>
+          <span>Contact Info</span>
           <br />
-          Phone : 1 (702) 988-2320 <br />
-          WhatsApp : +1 (640) 666 9566
+          Phone: 1 (702) 988-2320
+          <br />
+          WhatsApp: +1 (640) 666 9566
           <br />
           Email: materialscience@magnusconference.com
         </p>
-        <button className="hero-button">
-          <Link className="link" to="">
-            Conference Brochure{" "}
-          </Link>
-        </button>
-        <button className="hero-button">
-          <Link className="link" to="">
-            Register{" "}
-          </Link>
-        </button>
+        <div className="button-div">
+          <button className="hero-button">
+            <Link className="link" to="">
+              Conference Brochure
+            </Link>
+          </button>
+          <button className="hero-button">
+            <Link className="link" to="">
+              Register
+            </Link>
+          </button>
+        </div>
+      </div>
+      <div className="second-hero">
+        <h3 className="online-event">Online Event</h3>
+        <p className="second-para">
+          <span>Contact Info</span>
+          <br />
+          Phone: 1 (702) 988-2320
+          <br />
+          WhatsApp: +1 (640) 666 9566
+          <br />
+          Email: materialscience@magnusconference.com
+        </p>
+        <div className="button-div">
+          <button className="hero-button">
+            <Link className="link" to="">
+              Conference Brochure
+            </Link>
+          </button>
+          <button className="hero-button">
+            <Link className="link" to="">
+              Register
+            </Link>
+          </button>
+        </div>
+      </div>
+      <div className="second-hero">
+        <h3 className="online-event">Online Event</h3>
+        <p className="second-para">
+          <span>Contact Info</span>
+          <br />
+          Phone: 1 (702) 988-2320
+          <br />
+          WhatsApp: +1 (640) 666 9566
+          <br />
+          Email: materialscience@magnusconference.com
+        </p>
+        <div className="button-div">
+          <button className="hero-button">
+            <Link className="link" to="">
+              Conference Brochure
+            </Link>
+          </button>
+          <button className="hero-button">
+            <Link className="link" to="">
+              Register
+            </Link>
+          </button>
+        </div>
       </div>
     </div>
   );
