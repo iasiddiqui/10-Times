@@ -13,7 +13,7 @@ const AddEventsHome = () => {
   return (
     <div className="event-home">
       <p className="event">
-        <span>ONLINE EVENT:</span> You can participate <span>Virtually</span>{" "}
+        <span className="span1">ONLINE EVENT:</span> You can participate <span className="span1">Virtually</span>{" "}
         from your home or work.
       </p>
 
@@ -167,7 +167,7 @@ const AddEventsHome = () => {
       <div className="second-hero">
         <h3 className="online-event">Online Event</h3>
         <p className="second-para">
-          <span>Contact Info</span>
+          <span className="span2">Contact Info</span>
           <br />
           Phone: 1 (702) 988-2320
           <br />
@@ -188,54 +188,18 @@ const AddEventsHome = () => {
           </button>
         </div>
       </div>
-      <div className="second-hero">
-        <h3 className="online-event">Online Event</h3>
-        <p className="second-para">
-          <span>Contact Info</span>
-          <br />
-          Phone: 1 (702) 988-2320
-          <br />
-          WhatsApp: +1 (640) 666 9566
-          <br />
-          Email: materialscience@magnusconference.com
+      <div className="about-us">
+        <h1 className="about-h1"> About stripe 2025 | Hybrid Event</h1>
+        <p className="about-us-para">
+        We are delighted to extend a cordial invitation to you for the "7th Edition of International Conference on Materials Science and Engineering" (MAT 2024), scheduled to take place from October 28-30, 2024, an Online Format<br/>
+        The innovative Online format provides participants with the flexibility to engage Virtually from the comfort and convenience of their home or workplace.<br/>
+        At the heart of this global summit is the theme, "Engineering Excellence: Novel Innovations in Material Science and Engineering" MAT 2024 stands as a dynamic platform poised to facilitate the exchange of cutting-edge research findings and advanced methodologies in the expansive field of materials science. Over the course of three days, the congress aims to establish a valuable forum, bringing together international experts, researchers, scientists, engineers and industry representatives for a rich and multidisciplinary exchange of knowledge.<br/>
+        Expect to be inspired by internationally acclaimed speakers who will share insights into the evolving landscape of materials science, addressing current challenges and presenting innovative solutions. Beyond the enriching academic sessions, this event is designed to provide an excellent networking opportunity for experts and industry partners alike. Anticipating the active participation of experts from premier research and professional institutes across the globe, MAT 2024 is poised to foster collaborative discussions that showcase the rapid advancements in material science and engineering.<br/>
+        We extend a warm invitation to you not only to attend but also to actively contribute to the discourse on materials engineering topics. Join us in shaping the future of this dynamic field alongside a community of esteemed experts and thought leaders. Your presence and insights will undoubtedly enhance the depth and breadth of this prestigious event dedicated to advancing materials science and engineering.<br/>
+        Recommended: Materials Science Conferences 2024 | Materials Conference 2024 | Materials Science and Engineering Events 2024 | Materials Congress 2024
         </p>
-        <div className="button-div">
-          <button className="hero-button">
-            <Link className="link" to="">
-              Conference Brochure
-            </Link>
-          </button>
-          <button className="hero-button">
-            <Link className="link" to="">
-              Register
-            </Link>
-          </button>
-        </div>
       </div>
-      <div className="second-hero">
-        <h3 className="online-event">Online Event</h3>
-        <p className="second-para">
-          <span>Contact Info</span>
-          <br />
-          Phone: 1 (702) 988-2320
-          <br />
-          WhatsApp: +1 (640) 666 9566
-          <br />
-          Email: materialscience@magnusconference.com
-        </p>
-        <div className="button-div">
-          <button className="hero-button">
-            <Link className="link" to="">
-              Conference Brochure
-            </Link>
-          </button>
-          <button className="hero-button">
-            <Link className="link" to="">
-              Register
-            </Link>
-          </button>
-        </div>
-      </div>
+      
     </div>
   );
 };

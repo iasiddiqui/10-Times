@@ -11,12 +11,14 @@
     background-color: rgb(255, 255, 255);
     color: black;
     font-size: 1rem;
-    margin-top: 0rem;
+    margin-top: 0.3rem;
+    margin-bottom: 0.2rem;
     text-align: center;
-    align-items: center;
+    /* align-items: center; */
     justify-content: center;
 }
-p span{
+
+p .span1{
     color: #0781f3;
 }
 
@@ -29,7 +31,7 @@ p span{
     width: 9rem;
     height: auto;
     margin-left: 1rem;
-    margin-top: 0.7rem;
+    margin-top: 0rem;
     /* background-color: #ffffff64; */
     border-radius: 10px;
     z-index:10000;
@@ -40,7 +42,7 @@ p span{
     z-index: 100;
     width: 100%;
     background-color: #3826dc;
-    padding: 1px;
+    padding: 0rem;   
     margin-top: 0rem;
 }
 
@@ -141,6 +143,8 @@ p span{
     position: relative;
     width: 100%;
     z-index: 0;
+    padding: 0rem;
+    margin-top: -1rem;
 }
 
 .hero-section::before {
@@ -258,15 +262,16 @@ p span{
 
 .second-hero {
     display: flex;
-    justify-content: space-between; 
-    align-items: center; 
+    justify-content: space-between;
+    align-items: center;
     width: 80%;
     margin: 0 auto;
     background-color: rgb(231, 224, 224);
     border: 1px solid black;
-    box-shadow: #000000;
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.3); 
     padding: 1rem;
 }
+
 
 .online-event {
     flex: 1;
@@ -292,6 +297,25 @@ p span{
     padding: 5px 10px; 
 }
 
+/* about section started */
+
+.about-us{
+    position: relative;
+    text-align: justify;
+    text-align: center;
+}
+.about-h1{
+    text-align: center;
+}
+.about-us-para{
+    width: 70%;
+    margin: 0 auto; 
+    text-align: justify;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    line-break: strict;
+}
 
 
 
