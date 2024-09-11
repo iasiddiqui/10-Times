@@ -1,9 +1,11 @@
-.body{
+.body {
     height: 100vh;
     width: 100vw;
     background-color: black;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-}.event-home {
+}
+
+.event-home {
     color: black;
 }
 
@@ -18,14 +20,15 @@
     justify-content: center;
 }
 
-p .span1{
+p .span1 {
     color: #0781f3;
 }
 
 /* NAVBAR BEGINS */
-.logo{
+.logo {
     position: absolute;
 }
+
 .logo img {
 
     width: 9rem;
@@ -34,15 +37,16 @@ p .span1{
     margin-top: 0rem;
     /* background-color: #ffffff64; */
     border-radius: 10px;
-    z-index:10000;
+    z-index: 10000;
 }
+
 .navbar {
     position: sticky;
     top: 0;
     z-index: 100;
     width: 100%;
     background-color: #3826dc;
-    padding: 0rem;   
+    padding: 0rem;
     margin-top: 0rem;
 }
 
@@ -56,7 +60,7 @@ p .span1{
 
 .navbar ul li {
     position: relative;
-    
+
 }
 
 .navbar ul li a {
@@ -71,9 +75,11 @@ p .span1{
     width: auto;
     color: #575470;
 }
+
 .navbar ul li a:hover {
     color: #0781f3;
 }
+
 .menu-icon {
     display: none;
     font-size: 24px;
@@ -90,7 +96,7 @@ p .span1{
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color:  #0e0f26da;
+    background-color: #0e0f26da;
     z-index: 1;
     left: 0;
     top: 25px;
@@ -154,7 +160,7 @@ p .span1{
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.655); 
+    background: rgba(0, 0, 0, 0.655);
     z-index: 0;
 }
 
@@ -170,7 +176,7 @@ p .span1{
     left: 50%;
     transform: translate(-50%, -50%);
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     color: white;
@@ -187,7 +193,8 @@ p .span1{
     margin-top: 0%;
     z-index: 0;
 }
-.event-date h2{
+
+.event-date h2 {
     color: #0781f3;
     background-color: #fff;
     padding: 4px;
@@ -198,15 +205,15 @@ p .span1{
 
 .overlay-box-container {
     display: flex;
-    flex-direction: row; 
+    flex-direction: row;
     justify-content: center;
-    width: 100%; 
+    width: 100%;
     white-space: nowrap;
     gap: 10px;
 }
 
 .overlay-box {
-    background: rgba(189, 150, 150, 0.374); 
+    background: rgba(189, 150, 150, 0.374);
     border: 1px solid black;
     padding: 0.5rem;
     border-radius: 5px;
@@ -224,16 +231,18 @@ p .span1{
     font-weight: bold;
     display: block;
 }
+
 .overlay-box:hover {
     background-color: #fff;
     color: #0781f3;
 }
+
 .overlay-box:hover .link {
     color: #0781f3;
 }
 
 .overlay-box-early {
-    background: rgb(255, 255, 255); 
+    background: rgb(255, 255, 255);
     border: 1px solid black;
     padding: 0.5rem;
     border-radius: 5px;
@@ -242,18 +251,20 @@ p .span1{
     gap: 10px;
     transition: background-color 0.3s, color 0.3s;
 }
-.overlay-box-early .early{
+
+.overlay-box-early .early {
     color: #0781f3;
     font-weight: bold;
 }
-.overlay-box-early:hover{
-    background: rgba(189, 150, 150, 0.374); 
+
+.overlay-box-early:hover {
+    background: rgba(189, 150, 150, 0.374);
     color: white;
     border: 1px solid black;
     padding: 0.5rem;
     border-radius: 5px;
     text-align: center;
-    font-weight: normal ;
+    font-weight: normal;
     flex: 1;
     gap: 10px;
 }
@@ -268,14 +279,14 @@ p .span1{
     margin: 0 auto;
     background-color: rgb(231, 224, 224);
     border: 1px solid black;
-    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.3); 
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.3);
     padding: 1rem;
 }
 
 
 .online-event {
     flex: 1;
-    text-align: left; 
+    text-align: left;
 
 }
 
@@ -286,40 +297,128 @@ p .span1{
 
 .button-div {
     display: flex;
-    flex-direction: column; 
-    gap: 1rem; 
-    flex: 1; 
+    flex-direction: column;
+    gap: 1rem;
+    flex: 1;
     align-items: flex-end;
 }
 
 .hero-button {
-    width: auto; 
-    padding: 5px 10px; 
+    width: auto;
+    padding: 5px 10px;
 }
 
 /* about section started */
 
-.about-us{
+.about-us {
     position: relative;
     text-align: justify;
     text-align: center;
 }
-.about-h1{
+
+.about-h1 {
     text-align: center;
 }
-.about-us-para{
+
+.about-us-para {
     width: 70%;
-    margin: 0 auto; 
+    margin: 0 auto;
     text-align: justify;
     display: flex;
     flex-direction: column;
-    align-items: center; 
+    align-items: center;
     line-break: strict;
+}
+
+.about-us-para br {
+    display: block;
+    margin-bottom: 12px;
 }
 
 
 
+/* scientific-session */
+.container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
 
+.row-session {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    margin: 20px;
+    width: 70%;
+}
+
+.scientific-session {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-right: 20px;
+    flex: 2;
+}
+
+.session-h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.content-wrapper {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    width: 100%;
+    justify-content: center;
+}
+
+.sessions {
+    display: flex;
+    flex-direction: column;
+    flex: 2;
+}
+
+.sessions ul {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sessions li {
+    margin-bottom: 10px;
+}
+
+.sessions a {
+    text-decoration: none;
+    color: #333;
+    padding: 5px;
+    display: block;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.sessions a:hover {
+    background-color: #0781f3;
+    color: white;
+}
+
+.session-picture-wrapper {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.session-picture {
+    max-width: 100%;
+    height: auto;
+}
 
 
 
@@ -328,13 +427,13 @@ p .span1{
 
 @media (max-width: 768px) {
     .navbar ul {
-        display: none; 
+        display: none;
         flex-direction: column;
         /* align-items: stretch; */
     }
 
     .navbar ul.active {
-        display: flex; 
+        display: flex;
     }
 
     .navbar ul li {
@@ -362,7 +461,7 @@ p .span1{
     .menu-icon {
         display: block;
         cursor: pointer;
-        font-size:2rem;
+        font-size: 2rem;
         color: white;
         margin: 5px;
         display: flex;

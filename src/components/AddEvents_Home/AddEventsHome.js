@@ -13,18 +13,18 @@ const AddEventsHome = () => {
   return (
     <div className="event-home">
       <p className="event">
-        <span className="span1">ONLINE EVENT:</span> You can participate <span className="span1">Virtually</span>{" "}
-        from your home or work.
+        <span className="span1">ONLINE EVENT:</span> You can participate{" "}
+        <span className="span1">Virtually</span> from your home or work.
       </p>
 
       {/* Navbar */}
       <nav className="navbar">
-      <div className="logo">
-        <img
-          src="https://www.stripeconferences.com/wp-content/uploads/2023/11/stripe-conferences-logo2-1-1400x387.png"
-          alt="Event Logo"
-        />
-      </div>
+        <div className="logo">
+          <img
+            src="https://www.stripeconferences.com/wp-content/uploads/2023/11/stripe-conferences-logo2-1-1400x387.png"
+            alt="Event Logo"
+          />
+        </div>
         <div className="menu-icon" onClick={toggleMenu}>
           &#9776;
         </div>
@@ -191,15 +191,129 @@ const AddEventsHome = () => {
       <div className="about-us">
         <h1 className="about-h1"> About stripe 2025 | Hybrid Event</h1>
         <p className="about-us-para">
-        We are delighted to extend a cordial invitation to you for the "7th Edition of International Conference on Materials Science and Engineering" (MAT 2024), scheduled to take place from October 28-30, 2024, an Online Format<br/>
-        The innovative Online format provides participants with the flexibility to engage Virtually from the comfort and convenience of their home or workplace.<br/>
-        At the heart of this global summit is the theme, "Engineering Excellence: Novel Innovations in Material Science and Engineering" MAT 2024 stands as a dynamic platform poised to facilitate the exchange of cutting-edge research findings and advanced methodologies in the expansive field of materials science. Over the course of three days, the congress aims to establish a valuable forum, bringing together international experts, researchers, scientists, engineers and industry representatives for a rich and multidisciplinary exchange of knowledge.<br/>
-        Expect to be inspired by internationally acclaimed speakers who will share insights into the evolving landscape of materials science, addressing current challenges and presenting innovative solutions. Beyond the enriching academic sessions, this event is designed to provide an excellent networking opportunity for experts and industry partners alike. Anticipating the active participation of experts from premier research and professional institutes across the globe, MAT 2024 is poised to foster collaborative discussions that showcase the rapid advancements in material science and engineering.<br/>
-        We extend a warm invitation to you not only to attend but also to actively contribute to the discourse on materials engineering topics. Join us in shaping the future of this dynamic field alongside a community of esteemed experts and thought leaders. Your presence and insights will undoubtedly enhance the depth and breadth of this prestigious event dedicated to advancing materials science and engineering.<br/>
-        Recommended: Materials Science Conferences 2024 | Materials Conference 2024 | Materials Science and Engineering Events 2024 | Materials Congress 2024
+          We are delighted to extend a cordial invitation to you for the "7th
+          Edition of International Conference on Materials Science and
+          Engineering" (MAT 2024), scheduled to take place from October 28-30,
+          2024, an Online Format
+          <br />
+          The innovative Online format provides participants with the
+          flexibility to engage Virtually from the comfort and convenience of
+          their home or workplace.
+          <br />
+          At the heart of this global summit is the theme, "Engineering
+          Excellence: Novel Innovations in Material Science and Engineering" MAT
+          2024 stands as a dynamic platform poised to facilitate the exchange of
+          cutting-edge research findings and advanced methodologies in the
+          expansive field of materials science. Over the course of three days,
+          the congress aims to establish a valuable forum, bringing together
+          international experts, researchers, scientists, engineers and industry
+          representatives for a rich and multidisciplinary exchange of
+          knowledge.
+          <br />
+          Expect to be inspired by internationally acclaimed speakers who will
+          share insights into the evolving landscape of materials science,
+          addressing current challenges and presenting innovative solutions.
+          Beyond the enriching academic sessions, this event is designed to
+          provide an excellent networking opportunity for experts and industry
+          partners alike. Anticipating the active participation of experts from
+          premier research and professional institutes across the globe, MAT
+          2024 is poised to foster collaborative discussions that showcase the
+          rapid advancements in material science and engineering.
+          <br />
+          We extend a warm invitation to you not only to attend but also to
+          actively contribute to the discourse on materials engineering topics.
+          Join us in shaping the future of this dynamic field alongside a
+          community of esteemed experts and thought leaders. Your presence and
+          insights will undoubtedly enhance the depth and breadth of this
+          prestigious event dedicated to advancing materials science and
+          engineering.
+          <br />
+          Recommended: Materials Science Conferences 2024 | Materials Conference
+          2024 | Materials Science and Engineering Events 2024 | Materials
+          Congress 2024
         </p>
       </div>
-      
+
+      <div className="container">
+        <div className="row-session">
+          <div className="scientific-session">
+            <h1 className="session-h1">Scientific Sessions</h1>
+            <div className="content-wrapper">
+              <div className="sessions">
+                <ul className={isMenuOpen ? "active" : ""}>
+                  <li className="session-name">
+                    <Link to="">Materials Science and Engineering</Link>
+                  </li>
+                  <li className="session-name">
+                    <Link to="">Polymer Science and Engineering</Link>
+                  </li>
+                  <li className="session-name">
+                    <Link to="">
+                      Nanomaterials and <br />
+                      Nanotechnology
+                    </Link>
+                  </li>
+                  <li className="session-name">
+                    <Link to="">
+                      Ceramics, Engineering Materials and Composite Materials
+                    </Link>
+                  </li>
+                  <li className="session-name">
+                    <Link to="">Emerging Smart Materials</Link>
+                  </li>
+                  <li className="session-name">
+                    <Link to="">Plastics and Elastomers</Link>
+                  </li>
+                  <li className="session-name">
+                    <Link to="">Metals, Mining, Minerals and Materials</Link>
+                  </li>
+                  <li className="session-name">
+                    <Link to="">
+                      Advances in Materials Science, Metals and Minerals
+                    </Link>
+                  </li>
+                  <li className="session-name">
+                    <Link to="">
+                      Optical, Electronic, Magnetic Materials and Plasmonics
+                    </Link>
+                  </li>
+                  <li className="session-name">
+                    <Link to="">
+                      Mechanics, Characterization Techniques and Equipments
+                    </Link>
+                  </li>
+                  <li className="session-name">
+                    <Link to="">
+                      Metal recycling processes, waste treatment
+                    </Link>
+                  </li>
+                  <li className="session-name">
+                    <Link to="">Batteries & Solid Electrolyte Materials</Link>
+                  </li>
+                  <li className="session-name">
+                    <Link to="">Rheology of Polymers</Link>
+                  </li>
+                  <li className="session-name">
+                    <Link to="">Structural Materials and Metallurgy</Link>
+                  </li>
+                  <li className="session-name">
+                    <Link to=""> Environmental and Green Materials</Link>
+                  </li>
+                  <li className="session-name">
+                    <Link to="">Biomaterials and Medical Devices</Link>
+                  </li>
+                </ul>
+              </div>
+              <div className="session-picture-wrapper">
+                <img
+                  className="session-picture"
+                  src="https://materials.magnusconferences.com/uploads/pages/home-22587.jpg"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
