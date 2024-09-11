@@ -25,7 +25,7 @@
 
 .container {
     position: relative;
-    width: 400px;
+    width: 100px;
     margin: 0 auto;
     padding: 20px;
     margin-top: 10px;
@@ -141,7 +141,7 @@ button[type="submit"] {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.325);
 }
 
-a {
+.forgot {
     text-decoration: none;
     color: black;
 }

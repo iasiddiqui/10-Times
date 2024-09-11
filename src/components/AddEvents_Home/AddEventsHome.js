@@ -127,7 +127,8 @@ const AddEventsHome = () => {
         </ul>
       </nav>
 
-      {/* Hero Section */}
+      {/* ---------------Hero Section --------------------*/}
+
       <div className="hero-section">
         <img
           src="https://img.freepik.com/free-photo/people-taking-part-high-protocol-event_23-2150951245.jpg"
@@ -163,7 +164,8 @@ const AddEventsHome = () => {
         </div>
       </div>
 
-      {/* Second Hero Section */}
+      {/* ------------Second Hero Section ----------------*/}
+
       <div className="second-hero">
         <h3 className="online-event">Online Event</h3>
         <p className="second-para">
@@ -196,9 +198,11 @@ const AddEventsHome = () => {
           Engineering" (MAT 2024), scheduled to take place from October 28-30,
           2024, an Online Format
           <br />
+          <br />
           The innovative Online format provides participants with the
           flexibility to engage Virtually from the comfort and convenience of
           their home or workplace.
+          <br />
           <br />
           At the heart of this global summit is the theme, "Engineering
           Excellence: Novel Innovations in Material Science and Engineering" MAT
@@ -210,6 +214,7 @@ const AddEventsHome = () => {
           representatives for a rich and multidisciplinary exchange of
           knowledge.
           <br />
+          <br />
           Expect to be inspired by internationally acclaimed speakers who will
           share insights into the evolving landscape of materials science,
           addressing current challenges and presenting innovative solutions.
@@ -220,6 +225,7 @@ const AddEventsHome = () => {
           2024 is poised to foster collaborative discussions that showcase the
           rapid advancements in material science and engineering.
           <br />
+          <br />
           We extend a warm invitation to you not only to attend but also to
           actively contribute to the discourse on materials engineering topics.
           Join us in shaping the future of this dynamic field alongside a
@@ -228,13 +234,16 @@ const AddEventsHome = () => {
           prestigious event dedicated to advancing materials science and
           engineering.
           <br />
+          <br />
           Recommended: Materials Science Conferences 2024 | Materials Conference
           2024 | Materials Science and Engineering Events 2024 | Materials
           Congress 2024
         </p>
       </div>
 
-      <div className="container">
+      {/*----------- Scientific Sessions------------------------------------- */}
+
+      <div className="container-session">
         <div className="row-session">
           <div className="scientific-session">
             <h1 className="session-h1">Scientific Sessions</h1>
@@ -242,78 +251,224 @@ const AddEventsHome = () => {
               <div className="sessions">
                 <ul className={isMenuOpen ? "active" : ""}>
                   <li className="session-name">
-                    <Link to="">Materials Science and Engineering</Link>
+                    <Link
+                      to=""
+                      style={{ textDecoration: "none", color: "inherit" }}
+                    >
+                      Materials Science and Engineering
+                    </Link>
                   </li>
                   <li className="session-name">
-                    <Link to="">Polymer Science and Engineering</Link>
+                    <Link
+                      to=""
+                      style={{ textDecoration: "none", color: "inherit" }}
+                    >
+                      Polymer Science and Engineering
+                    </Link>
                   </li>
                   <li className="session-name">
-                    <Link to="">
+                    <Link
+                      to=""
+                      style={{ textDecoration: "none", color: "inherit" }}
+                    >
                       Nanomaterials and <br />
                       Nanotechnology
                     </Link>
                   </li>
                   <li className="session-name">
-                    <Link to="">
+                    <Link
+                      to=""
+                      style={{ textDecoration: "none", color: "inherit" }}
+                    >
                       Ceramics, Engineering Materials and Composite Materials
                     </Link>
                   </li>
                   <li className="session-name">
-                    <Link to="">Emerging Smart Materials</Link>
+                    <Link
+                      to=""
+                      style={{ textDecoration: "none", color: "inherit" }}
+                    >
+                      Emerging Smart Materials
+                    </Link>
                   </li>
                   <li className="session-name">
-                    <Link to="">Plastics and Elastomers</Link>
+                    <Link
+                      to=""
+                      style={{ textDecoration: "none", color: "inherit" }}
+                    >
+                      Plastics and Elastomers
+                    </Link>
                   </li>
                   <li className="session-name">
-                    <Link to="">Metals, Mining, Minerals and Materials</Link>
+                    <Link
+                      to=""
+                      style={{ textDecoration: "none", color: "inherit" }}
+                    >
+                      Metals, Mining, Minerals and Materials
+                    </Link>
                   </li>
                   <li className="session-name">
-                    <Link to="">
+                    <Link
+                      to=""
+                      style={{ textDecoration: "none", color: "inherit" }}
+                    >
                       Advances in Materials Science, Metals and Minerals
                     </Link>
                   </li>
                   <li className="session-name">
-                    <Link to="">
+                    <Link
+                      to=""
+                      style={{ textDecoration: "none", color: "inherit" }}
+                    >
                       Optical, Electronic, Magnetic Materials and Plasmonics
                     </Link>
                   </li>
                   <li className="session-name">
-                    <Link to="">
+                    <Link
+                      to=""
+                      style={{ textDecoration: "none", color: "inherit" }}
+                    >
                       Mechanics, Characterization Techniques and Equipments
                     </Link>
                   </li>
                   <li className="session-name">
-                    <Link to="">
+                    <Link
+                      to=""
+                      style={{ textDecoration: "none", color: "inherit" }}
+                    >
                       Metal recycling processes, waste treatment
                     </Link>
                   </li>
                   <li className="session-name">
-                    <Link to="">Batteries & Solid Electrolyte Materials</Link>
+                    <Link
+                      to=""
+                      style={{ textDecoration: "none", color: "inherit" }}
+                    >
+                      Batteries & Solid Electrolyte Materials
+                    </Link>
                   </li>
                   <li className="session-name">
-                    <Link to="">Rheology of Polymers</Link>
+                    <Link
+                      to=""
+                      style={{ textDecoration: "none", color: "inherit" }}
+                    >
+                      Rheology of Polymers
+                    </Link>
                   </li>
                   <li className="session-name">
-                    <Link to="">Structural Materials and Metallurgy</Link>
+                    <Link
+                      to=""
+                      style={{ textDecoration: "none", color: "inherit" }}
+                    >
+                      Structural Materials and Metallurgy
+                    </Link>
                   </li>
                   <li className="session-name">
-                    <Link to=""> Environmental and Green Materials</Link>
+                    <Link
+                      to=""
+                      style={{ textDecoration: "none", color: "inherit" }}
+                    >
+                      {" "}
+                      Environmental and Green Materials
+                    </Link>
                   </li>
                   <li className="session-name">
-                    <Link to="">Biomaterials and Medical Devices</Link>
+                    <Link
+                      to=""
+                      style={{ textDecoration: "none", color: "inherit" }}
+                    >
+                      Biomaterials and Medical Devices
+                    </Link>
                   </li>
                 </ul>
+                <div className="sessions-buttons">
+                  <button className="sessions-button">
+                    <Link
+                      className="seesion-link"
+                      to=""
+                      style={{ textDecoration: "none", color: "inherit" }}
+                    >
+                      Submit Abstract
+                    </Link>
+                  </button>
+                  <button className="sessions-button">
+                    <Link
+                      className="button-link"
+                      to=""
+                      style={{ textDecoration: "none", color: "inherit" }}
+                    >
+                      View All Sessions
+                    </Link>
+                  </button>
+                </div>
               </div>
               <div className="session-picture-wrapper">
                 <img
                   className="session-picture"
-                  src="https://materials.magnusconferences.com/uploads/pages/home-22587.jpg"
+                  src="https://img.freepik.com/free-photo/people-taking-part-high-protocol-event_23-2150951413.jpg"
+                  alt="Session Picture"
                 />
               </div>
             </div>
           </div>
         </div>
       </div>
+
+      {/*-------------- Scientific Committee Members------------ */}
+
+      <section className="committee-section">
+  <h2 className="section-heading">Scientific Committee Members</h2>
+  <div className="committee-container">
+    <div className="committee-member">
+      <img
+        className="committee-image"
+        src="https://materials.magnusconferences.com/uploads/speakers/ephraim-suhir-8803.jpg"
+        alt="Ephraim Suhir"
+      />
+      <h4 className="committee-name">Ephraim Suhir</h4>
+      <p className="committee-affiliation">Portland State University, United States</p>
+    </div>
+    <div className="committee-member">
+      <img
+        className="committee-image"
+        src="https://materials.magnusconferences.com/uploads/speakers/richard-j-spontak-5893.jpg"
+        alt="Richard J Spontak"
+      />
+      <h4 className="committee-name">Richard J Spontak</h4>
+      <p className="committee-affiliation">North Carolina State University, United States</p>
+    </div>
+    <div className="committee-member">
+      <img
+        className="committee-image"
+        src="https://materials.magnusconferences.com/uploads/speakers/thomas-j-webster-5955.jpg"
+        alt="Thomas J Webster"
+      />
+      <h4 className="committee-name">Thomas J Webster</h4>
+      <p className="committee-affiliation">Interstellar Therapeutics, United States</p>
+    </div>
+    <div className="committee-member">
+      <img
+        className="committee-image"
+        src="https://materials.magnusconferences.com/uploads/speakers/george-s-dulikravich-5045.jpg"
+        alt="George S Dulikravich"
+      />
+      <h4 className="committee-name">George S Dulikravich</h4>
+      <p className="committee-affiliation">Florida International University, United States</p>
+    </div>
+  </div>
+  <div className="button-container">
+    <button className="committee-btn">
+      <Link
+        className="committee-link"
+        to=""
+        style={{ textDecoration: "none", color: "inherit" }}
+      >
+        View All Members
+      </Link>
+    </button>
+  </div>
+</section>
+
     </div>
   );
 };

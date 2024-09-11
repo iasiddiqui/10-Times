@@ -24,7 +24,7 @@ p .span1 {
     color: #0781f3;
 }
 
-/* NAVBAR BEGINS */
+/* NAVBAR BEGINS ----------------------------------------------*/
 .logo {
     position: absolute;
 }
@@ -88,7 +88,7 @@ p .span1 {
     padding: 10px;
 }
 
-/* Dropdown Styling */
+/* Dropdown Styling --------------------------------------------*/
 .dropdown {
     position: relative;
 }
@@ -144,7 +144,7 @@ p .span1 {
 }
 
 
-/* hero section  */
+/* hero section  --------------------------------------------------------*/
 .hero-section {
     position: relative;
     width: 100%;
@@ -269,7 +269,7 @@ p .span1 {
     gap: 10px;
 }
 
-/* second hero */
+/* second hero ---------------------------------------*/
 
 .second-hero {
     display: flex;
@@ -277,7 +277,7 @@ p .span1 {
     align-items: center;
     width: 80%;
     margin: 0 auto;
-    background-color: rgb(231, 224, 224);
+    background-color: ;
     border: 1px solid black;
     box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.3);
     padding: 1rem;
@@ -306,9 +306,20 @@ p .span1 {
 .hero-button {
     width: auto;
     padding: 5px 10px;
+    background-color: #3826dc;
+    border-radius: 5px;
 }
 
-/* about section started */
+.hero-button:hover {
+    /* background-color:#fff; */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+button .hero-button:hover {
+    background-color: #fff;
+}
+
+/* about section started --------------------------------------------*/
 
 .about-us {
     position: relative;
@@ -322,6 +333,8 @@ p .span1 {
 
 .about-us-para {
     width: 70%;
+    height: 100%;
+    font-size: 1.1rem;
     margin: 0 auto;
     text-align: justify;
     display: flex;
@@ -337,11 +350,13 @@ p .span1 {
 
 
 
-/* scientific-session */
-.container {
+/*------ scientific-session -----------------------------------------*/
+
+
+.container-session {
     display: flex;
     justify-content: center;
-    width: 100%;
+    width: fit-content;
 }
 
 .row-session {
@@ -355,14 +370,14 @@ p .span1 {
 .scientific-session {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     padding-right: 20px;
     flex: 2;
 }
 
 .session-h1 {
     font-size: 2rem;
-    margin-bottom: 20px;
+    /* margin-bottom: 20px; */
     text-align: left;
 }
 
@@ -371,7 +386,7 @@ p .span1 {
     align-items: flex-start;
     gap: 20px;
     width: 100%;
-    justify-content: center;
+    justify-content: flex-start;
 }
 
 .sessions {
@@ -393,7 +408,7 @@ p .span1 {
     margin-bottom: 10px;
 }
 
-.sessions a {
+.sessions .session-name {
     text-decoration: none;
     color: #333;
     padding: 5px;
@@ -401,25 +416,141 @@ p .span1 {
     border: 1px solid #ddd;
     border-radius: 4px;
     transition: background-color 0.3s, color 0.3s;
+    font-weight: normal;
+    cursor: pointer;
 }
 
-.sessions a:hover {
-    background-color: #0781f3;
-    color: white;
+.sessions .session-name:hover {
+    color: #0781f3;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+
+.sessions-buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    margin-top: 1%;
+    justify-content: flex-start;
+    width: 5rem;
+    height: 2rem;
+    border: 0px;
+}
+
+.sessions-button {
+    padding: 10px 20px;
+    background-color: white;
+    color: black;
+
+    width: 10rem;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.sessions-button:hover {
+    background-color: #ffffff;
+    color: #3826dc;
+    transform: scale(1.05);
+}
+
+.sessions-button .button-link {
+    color: inherit;
+    text-decoration: none;
+    display: block;
+    width: 100%;
 }
 
 .session-picture-wrapper {
     flex: 1;
     display: flex;
-    align-items: center;
+
     justify-content: center;
 }
 
 .session-picture {
     max-width: 100%;
     height: auto;
+    border-radius: 5px;
+    margin-top: 7rem;
+
 }
 
+/*---------- Scientific Committee Members-------------- */
+
+.committee-section {
+    text-align: center;
+    margin: 20px;
+    background-color: #92a1ed;
+    padding: 20px;
+}
+
+.section-heading {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.committee-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.committee-member {
+    text-align: center;
+    border: 1px solid black;
+    background-color: #fff;
+    padding: 20px;
+    max-width: 180px;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.committee-image {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+}
+
+.committee-name {
+    font-size: 1rem;
+    color: #92a1ed;
+    margin: 10px 0;
+}
+
+.committee-affiliation {
+    font-size: 1rem;
+    text-align: center;
+}
+
+.committee-member:hover {
+    transform: scale(1.05);
+}
+
+.button-container {
+    margin-top: 20px;
+}
+
+.committee-btn {
+    color:#92a1ed;
+    background-color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.committee-btn:hover {
+    background-color: #e0e0e0;
+}
 
 
 
@@ -429,6 +560,7 @@ p .span1 {
     .navbar ul {
         display: none;
         flex-direction: column;
+        cursor: pointer;
         /* align-items: stretch; */
     }
 

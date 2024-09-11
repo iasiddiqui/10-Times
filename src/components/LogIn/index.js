@@ -110,7 +110,7 @@ function AuthForm() {
 
             {isLogin && (
               <div className="forgot-password">
-                <a href="#" onClick={(e) => e.preventDefault()}>
+                <a className="forgot" href="#" onClick={(e) => e.preventDefault()}>
                   Forgot Password?
                 </a>
               </div>

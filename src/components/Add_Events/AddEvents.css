@@ -102,7 +102,7 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 
 
-button {
+button .add-event-btn{
     background-color: #007bff;
     color: white;
     border: none;
@@ -114,12 +114,12 @@ button {
 }
 
 
-button:hover {
+.add-event-btn:hover {
     background-color: #0056b3;
 }
 
 
-button:focus {
+.add-event-btn:focus {
     outline: none;
     box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5);
 }

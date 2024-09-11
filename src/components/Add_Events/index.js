@@ -326,7 +326,7 @@ const AddEvent = () => {
           </ul>
         </div>
 
-        <button type="submit">Create Event</button>
+        <button className="add-event-btn" type="submit">Create Event</button>
       </form>{" "}
     </div>
   );
