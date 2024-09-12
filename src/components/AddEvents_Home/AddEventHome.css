@@ -277,7 +277,7 @@ p .span1 {
     align-items: center;
     width: 80%;
     margin: 0 auto;
-    background-color: ;
+    /* background-color: ; */
     border: 1px solid black;
     box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.3);
     padding: 1rem;
@@ -484,15 +484,15 @@ button .hero-button:hover {
 
 .committee-section {
     text-align: center;
-    margin: 20px;
-    background-color: #92a1ed;
+    /* margin: 20px; */
+    background-color: #92a1ed7e;
     padding: 20px;
 }
 
 .section-heading {
     font-size: 2rem;
     margin-bottom: 20px;
-    color: white;
+    color: #3826dc;
 }
 
 .committee-container {
@@ -500,6 +500,7 @@ button .hero-button:hover {
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
+    /* background-color: #92a1ed; */
 }
 
 .committee-member {
@@ -510,12 +511,14 @@ button .hero-button:hover {
     max-width: 180px;
     border-radius: 10px;
     transition: transform 0.3s ease;
+    cursor: pointer;
 }
 
 .committee-image {
     width: 100%;
     height: auto;
     border-radius: 50%;
+    cursor: pointer;
 }
 
 .committee-name {
@@ -538,7 +541,7 @@ button .hero-button:hover {
 }
 
 .committee-btn {
-    color:#92a1ed;
+    color:#3826dc;
     background-color: #fff;
     border: none;
     border-radius: 5px;
@@ -549,11 +552,168 @@ button .hero-button:hover {
 }
 
 .committee-btn:hover {
-    background-color: #e0e0e0;
+    background-color: #92a1ed00;
+    border: 1px solid #3826dc;
+    color: #3826dc ;
+}
+.second-section{
+    margin-top: 10px;
+    background-color: white;
+
+}
+.early-bird-div{
+    color: #3826dc;
+    text-align: center;
+
+}
+.early-h3{
+    text-align: center;
+    font-size: 2rem;
+}
+.register-btn{
+    background-color: #3826dc;
+    color: white;
+    border: none;
+    font-size: 1rem;
+    border-radius: 5px;
+    width: 6rem;
+    height: 2rem;
+}
+.register-btn:hover{
+    background-color: #fff;
+    color: #3826dc;
+    border: 1px solid #3826dc;
 }
 
 
+/*-------- Speaker Section styling started---------------- */
 
+.speaker-section {
+    padding: 20px;
+    background-color: #92a1ed7e;
+}
+
+.speaker-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+
+.speaker-h3 {
+    font-size: 1.5rem;
+    color:#3826dc;
+    margin-bottom: 20px;
+}
+
+.speaker-details-container {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center;
+    gap: 20px;
+}
+
+.speaker-details-div {
+    text-align: center;
+    border: 1px solid black;
+    background-color: #fff;
+    padding: 20px;
+    max-width: 180px;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.speaker-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10pxl;
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+.speaker-name {
+    font-size: 1rem;
+    color: #92a1ed;
+    margin: 10px 0;
+}
+
+.speaker-affiliation {
+    font-size: 1rem;
+    text-align: center;
+}
+
+.speaker-details-div:hover {
+    transform: scale(1.05);
+}
+
+/*------------- Media section started-------- */
+
+
+.media-partner {
+    padding: 20px; 
+}
+
+.media-div {
+    text-align: center; 
+}
+
+.media-h1 {
+    font-size: 2rem; 
+    color: #3826dc;
+    margin-bottom: 20px; 
+}
+
+.media-div > div {
+    display: flex;
+    justify-content: center; 
+    gap: 20px; 
+    
+}
+.media-pic {
+    max-width: 20rem; 
+    height: auto; 
+    border-radius: 5px; 
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/*------------ Past Conference Information ------------*/
+
+.past-conference{
+    padding: 20px;
+    background-color: #92a1ed7e;
+}
+
+.past-conference-container {
+    padding: 20px;
+  }
+  
+  .past-conference-nav {
+    margin-bottom: 20px;
+  }
+  
+  .past-conference-nav button {
+    margin-right: 10px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f8f9fa;
+  }
+  
+  .past-conference-content-box {
+    max-height: 200px; /* Adjust as needed */
+    overflow-y: auto; /* Add scrolling if content overflows */
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #fff;
+  }
+  
+  .past-conference-content-box p {
+    margin: 0;
+  }
+  
 
 
 @media (max-width: 768px) {

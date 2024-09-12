@@ -2,12 +2,19 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./AddEventHome.css";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
+import Speakerdetails from "./Speakerdetails";
+import PastConferenceData from "./PastConferenceData";
 
 const AddEventsHome = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [selected, setSelected] = useState("stripe2024");
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
+  };
+
+  const handleClick = (link) => {
+    setSelected(link);
   };
 
   return (
@@ -417,58 +424,146 @@ const AddEventsHome = () => {
       {/*-------------- Scientific Committee Members------------ */}
 
       <section className="committee-section">
-  <h2 className="section-heading">Scientific Committee Members</h2>
-  <div className="committee-container">
-    <div className="committee-member">
-      <img
-        className="committee-image"
-        src="https://materials.magnusconferences.com/uploads/speakers/ephraim-suhir-8803.jpg"
-        alt="Ephraim Suhir"
-      />
-      <h4 className="committee-name">Ephraim Suhir</h4>
-      <p className="committee-affiliation">Portland State University, United States</p>
-    </div>
-    <div className="committee-member">
-      <img
-        className="committee-image"
-        src="https://materials.magnusconferences.com/uploads/speakers/richard-j-spontak-5893.jpg"
-        alt="Richard J Spontak"
-      />
-      <h4 className="committee-name">Richard J Spontak</h4>
-      <p className="committee-affiliation">North Carolina State University, United States</p>
-    </div>
-    <div className="committee-member">
-      <img
-        className="committee-image"
-        src="https://materials.magnusconferences.com/uploads/speakers/thomas-j-webster-5955.jpg"
-        alt="Thomas J Webster"
-      />
-      <h4 className="committee-name">Thomas J Webster</h4>
-      <p className="committee-affiliation">Interstellar Therapeutics, United States</p>
-    </div>
-    <div className="committee-member">
-      <img
-        className="committee-image"
-        src="https://materials.magnusconferences.com/uploads/speakers/george-s-dulikravich-5045.jpg"
-        alt="George S Dulikravich"
-      />
-      <h4 className="committee-name">George S Dulikravich</h4>
-      <p className="committee-affiliation">Florida International University, United States</p>
-    </div>
-  </div>
-  <div className="button-container">
-    <button className="committee-btn">
-      <Link
-        className="committee-link"
-        to=""
-        style={{ textDecoration: "none", color: "inherit" }}
-      >
-        View All Members
-      </Link>
-    </button>
-  </div>
-</section>
+        <h2 className="section-heading">Scientific Committee Members</h2>
+        <div className="committee-container">
+          <div className="committee-member">
+            <img
+              className="committee-image"
+              src="https://materials.magnusconferences.com/uploads/speakers/ephraim-suhir-8803.jpg"
+              alt="Ephraim Suhir"
+            />
+            <h4 className="committee-name">Ephraim Suhir</h4>
+            <p className="committee-affiliation">
+              Portland State University, United States
+            </p>
+          </div>
+          <div className="committee-member">
+            <img
+              className="committee-image"
+              src="https://materials.magnusconferences.com/uploads/speakers/richard-j-spontak-5893.jpg"
+              alt="Richard J Spontak"
+            />
+            <h4 className="committee-name">Richard J Spontak</h4>
+            <p className="committee-affiliation">
+              North Carolina State University, United States
+            </p>
+          </div>
+          <div className="committee-member">
+            <img
+              className="committee-image"
+              src="https://materials.magnusconferences.com/uploads/speakers/thomas-j-webster-5955.jpg"
+              alt="Thomas J Webster"
+            />
+            <h4 className="committee-name">Thomas J Webster</h4>
+            <p className="committee-affiliation">
+              Interstellar Therapeutics, United States
+            </p>
+          </div>
+          <div className="committee-member">
+            <img
+              className="committee-image"
+              src="https://materials.magnusconferences.com/uploads/speakers/george-s-dulikravich-5045.jpg"
+              alt="George S Dulikravich"
+            />
+            <h4 className="committee-name">George S Dulikravich</h4>
+            <p className="committee-affiliation">
+              Florida International University, United States
+            </p>
+          </div>
+        </div>
+        <div className="button-container">
+          <button className="committee-btn">
+            <Link
+              className="committee-link"
+              to=""
+              style={{ textDecoration: "none", color: "inherit" }}
+            >
+              View All Members
+            </Link>
+          </button>
+        </div>
+      </section>
 
+      <section className="second-section">
+        <div className="early-bird-div">
+          <h3 className="early-h3">
+            Earlybird Registrations Closes on September 17th 2024
+          </h3>
+          <button className="register-btn">Register</button>
+        </div>
+      </section>
+
+      {/* ------Speakerdetails------------- */}
+
+      <section className="speaker-section">
+        <div className="speaker-div">
+          <h3 className="speaker-h3">Speakers</h3>
+          <div className="speaker-details-container">
+            {Speakerdetails.map((details, index) => (
+              <div className="speaker-details-div" key={index}>
+                <img
+                  className="speaker-image"
+                  src={details.imageUrl}
+                  alt={details.name}
+                />
+                <h4 className="speaker-name">{details.name}</h4>
+                <p className="speaker-affiliation">{details.affiliation}</p>
+              </div>
+            ))}
+          </div>
+          <div className="button-container">
+            <button className="committee-btn">
+              <Link
+                className="committee-link"
+                to=""
+                style={{ textDecoration: "none", color: "inherit" }}
+              >
+                View All Members
+              </Link>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      {/* --------Media Partners-------- */}
+
+      <section className="media-partner">
+        <div className="media-div">
+          <h1 className="media-h1">Media Partners</h1>
+          <div className="media-pic-div">
+            <img
+              className="media-pic"
+              src="https://materials.magnusconferences.com/uploads/logos/kind-congress-3915.png"
+              alt="Kind Congress"
+            />
+            <img
+              className="media-pic"
+              src="https://materials.magnusconferences.com/uploads/logos/all-conference-alert-4578.png"
+              alt="All Conference Alert"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section className="past-conference">
+        <div className="past-conference-container">
+          <nav className="past-conference-nav">
+            <button onClick={() => handleClick("stripe2024")}>
+              Stripe 2024
+            </button>
+            <button onClick={() => handleClick("stripe2023")}>
+              Stripe 2023
+            </button>
+            <button onClick={() => handleClick("stripe")}>Stripe</button>
+            <button onClick={() => handleClick("stripe2021")}>
+              Stripe 2021
+            </button>
+          </nav>
+
+          {/* Use the PastConferenceData component to display the paragraph */}
+          <PastConferenceData selected={selected} />
+        </div>
+      </section>
     </div>
   );
 };
