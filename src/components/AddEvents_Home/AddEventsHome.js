@@ -4,19 +4,26 @@ import "./AddEventHome.css";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import Speakerdetails from "./Speakerdetails";
 import PastConferenceData from "./PastConferenceData";
-
+import scheduleData from "./ConferenceSchedule";
 const AddEventsHome = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [selected, setSelected] = useState("stripe2024");
+  const [selectedConference, setSelectedConference] = useState("stripe2024");
+  const [selectedDay, setSelectedDay] = useState("day01");
 
+  // Function to toggle menu
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
-  const handleClick = (link) => {
-    setSelected(link);
+  // Function to handle conference selection
+  const handleConferenceClick = (conference) => {
+    setSelectedConference(conference);
   };
 
+  // Function to handle schedule day selection
+  const handleDayClick = (day) => {
+    setSelectedDay(day);
+  };
   return (
     <div className="event-home">
       <p className="event">
@@ -545,23 +552,65 @@ const AddEventsHome = () => {
         </div>
       </section>
 
+      {/* ----------Past Conference Data ----------*/}
+
       <section className="past-conference">
         <div className="past-conference-container">
+          <h1 className="past-conference-h1">Past Conference Information</h1>
           <nav className="past-conference-nav">
-            <button onClick={() => handleClick("stripe2024")}>
+            <button
+              className="past-conference-btn"
+              onClick={() => handleConferenceClick("stripe2024")}
+            >
               Stripe 2024
             </button>
-            <button onClick={() => handleClick("stripe2023")}>
+            <button
+              className="past-conference-btn"
+              onClick={() => handleConferenceClick("stripe2023")}
+            >
               Stripe 2023
             </button>
-            <button onClick={() => handleClick("stripe")}>Stripe</button>
-            <button onClick={() => handleClick("stripe2021")}>
+            <button
+              className="past-conference-btn"
+              onClick={() => handleConferenceClick("stripe")}
+            >
+              Stripe
+            </button>
+            <button
+              className="past-conference-btn"
+              onClick={() => handleConferenceClick("stripe2021")}
+            >
               Stripe 2021
             </button>
           </nav>
 
-          {/* Use the PastConferenceData component to display the paragraph */}
-          <PastConferenceData selected={selected} />
+          <PastConferenceData selected={selectedConference} />
+        </div>
+      </section>
+
+      <section className="conference-schedule">
+          <h1 className="conference-schedule-h1">Conference Schedule</h1>
+        <div className="conference-schedule-container">
+
+          <nav className="conference-schedule-nav">
+            {["day01", "day02", "day03"].map((day) => (
+              <button
+                key={day}
+                className="conference-schedule-btn"
+                onClick={() => handleDayClick(day)}
+              >
+                {`Day ${day.slice(-2)}`}
+              </button>
+            ))}
+          </nav>
+
+          <div className="conference-schedule-details">
+            {scheduleData[selectedDay]?.map((event, index) => (
+              <div key={index} className="event">
+                <span className="event-time">{event.time}</span>: {event.event}
+              </div>
+            ))}
+          </div>
         </div>
       </section>
     </div>
